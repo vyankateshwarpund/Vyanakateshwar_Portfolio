@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates & Credentials | Vyankateshwar Pund - Python & Django Developer</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Verified professional certifications of Vyankateshwar Santosh Pund - Python, MySQL, GitHub, HTML+CSS, and Smart India Hackathon 2026.">
+    <meta name="keywords" content="Vyankateshwar Pund, Certificates, Python Certificate, MySQL Certificate, GitHub Certificate, Smart India Hackathon, CCIT Institute">
+    <meta name="author" content="Vyankateshwar Santosh Pund">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vyankateshwar Santosh Pund - Certificates & Certifications">
+    <meta property="og:description" content="Verified credentials in Python, MySQL, Git/GitHub, HTML+CSS, and Smart India Hackathon 2026.">
+    <meta property="og:image" content="media/certificates/smart-india-hackathon-2026.jpg">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="static/manifest.json">
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 & Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <style>
+        .cert-card {
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .cert-card:hover {
+            transform: translateY(-7px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.25);
+        }
+        .cert-img-container {
+            position: relative;
+            height: 230px;
+            overflow: hidden;
+            background: #0f172a;
+            cursor: pointer;
+        }
+        .cert-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.45s ease;
+        }
+        .cert-card:hover .cert-img-container img {
+            transform: scale(1.05);
+        }
+        .cert-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            backdrop-filter: blur(2px);
+        }
+        .cert-img-container:hover .cert-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-logo">VP</div>
+        <div class="small text-muted mt-2 fw-semibold">Loading Credentials...</div>
+        <div class="preloader-bar">
+            <div class="preloader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Gradient Blobs Background -->
+    <div class="gradient-blob blob-1"></div>
+    <div class="gradient-blob blob-2"></div>
+
+    <!-- Canvas Particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor d-none d-md-block"></div>
+    <div class="custom-cursor-dot d-none d-md-block"></div>
+
+    <!-- Floating Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-floating">
+        <div class="container-fluid">
+            <a class="navbar-brand gradient-text" href="index.html">
+                <i class="bi bi-terminal-fill me-2"></i>VP.dev
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavbar">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="portfolioNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="certificates.html">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2">
+                    <button id="theme-toggle-btn" class="btn btn-glass btn-sm px-3" title="Toggle Light/Dark Theme">
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
+
+                    <a href="media/resume/Vyankateshwar_Pund_Resume_ATS_dMshc7W.pdf" download="Vyankateshwar_Pund_Resume.pdf" class="btn btn-gradient btn-sm px-3">
+                        <i class="bi bi-download me-1"></i> CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Page Content -->
+    <main style="padding-top: 100px; min-height: 85vh;">
+        
+        <!-- Header Intro Section -->
+        <section class="py-4 mt-3">
+            <div class="container">
+                <div class="text-center max-w-700 mx-auto mb-4">
+                    <div class="badge-pill-glow mb-3">
+                        <span class="status-dot-pulse"></span>
+                        <span><i class="bi bi-patch-check-fill text-success me-1"></i> Verified Credentials &amp; Honors</span>
+                    </div>
+                    <h1 class="display-5 fw-extrabold mb-3">
+                        Certificates &amp; <span class="gradient-text">Achievements</span>
+                    </h1>
+                    <p class="text-muted fs-5 leading-relaxed">
+                        Verified training courses from CCIT Institute and national hackathon honors representing hands-on mastery in Python, MySQL, Git, and web technologies.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Grid Section -->
+        <section class="py-4 mb-5">
+            <div class="container">
+                <div class="row g-4">
+                    
+                    <!-- 1. Smart India Hackathon 2026 -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="cert-card">
+                            <div class="cert-img-container" onclick="openCertModal('Smart India Hackathon (SIH) 2026', 'media/certificates/smart-india-hackathon-2026.jpg', 'Ministry of Education &amp; AICTE, Govt of India', '2026')">
+                                <img src="media/certificates/smart-india-hackathon-2026.jpg" alt="Smart India Hackathon 2026 Certificate">
+                                <div class="cert-overlay">
+                                    <span class="btn btn-gradient btn-sm px-3"><i class="bi bi-zoom-in me-1"></i> View Full Certificate</span>
+                                </div>
+                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-75 border border-warning text-warning">
+                                    <i class="bi bi-trophy-fill me-1"></i> National Hackathon
+                                </span>
+                            </div>
+
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <span class="badge bg-warning bg-opacity-25 text-warning fw-semibold px-3 py-1">
+                                        Ministry of Education &amp; AICTE
+                                    </span>
+                                    <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>2026</span>
+                                </div>
+
+                                <h4 class="fw-bold text-main mb-2">Smart India Hackathon (SIH) 2026</h4>
+                                <p class="text-muted small mb-3 flex-grow-1">
+                                    Awarded to <strong>Vyankateshwar Santosh Pund</strong> for participating in <em>Smart India Hackathon (SIH) 2026</em>, a nationwide initiative promoting Innovation, Problem Solving, and Youth Empowerment. Organized by Dr. Rajendra Gode Institute of Technology &amp; Research.
+                                </p>
+
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
+                                    <span class="badge theme-tech-badge small"><i class="bi bi-award-fill text-warning me-1"></i>SIH 2026 Verified</span>
+                                    <button class="btn btn-glass btn-sm" onclick="openCertModal('Smart India Hackathon (SIH) 2026', 'media/certificates/smart-india-hackathon-2026.jpg', 'Ministry of Education &amp; AICTE', '2026')">
+                                        <i class="bi bi-eye me-1"></i> Preview
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Python Programming Certificate -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="cert-card">
+                            <div class="cert-img-container" onclick="openCertModal('Certificate Course in Python', 'media/certificates/python-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
+                                <img src="media/certificates/python-certificate-ccit.jpg" alt="Python Certificate - CCIT">
+                                <div class="cert-overlay">
+                                    <span class="btn btn-gradient btn-sm px-3"><i class="bi bi-zoom-in me-1"></i> View Full Certificate</span>
+                                </div>
+                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-75 border border-success text-success">
+                                    <i class="bi bi-filetype-py me-1"></i> Core Programming
+                                </span>
+                            </div>
+
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <span class="badge bg-success bg-opacity-25 text-success fw-semibold px-3 py-1">
+                                        CCIT Institute (ISO 9001:2015)
+                                    </span>
+                                    <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>25th July 2026</span>
+                                </div>
+
+                                <h4 class="fw-bold text-main mb-2">Certificate Course in 'Python'</h4>
+                                <p class="text-muted small mb-3 flex-grow-1">
+                                    Awarded to <strong>Mr. Vyankateshwar S. Pund</strong> upon successfully completing the comprehensive Certificate Course in <strong>Python</strong> from CCIT Centre, covering OOP, data structures, algorithms, and modular Python development.
+                                </p>
+
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
+                                    <span class="badge theme-tech-badge small"><i class="bi bi-patch-check-fill text-success me-1"></i>Python Verified</span>
+                                    <button class="btn btn-glass btn-sm" onclick="openCertModal('Certificate Course in Python', 'media/certificates/python-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
+                                        <i class="bi bi-eye me-1"></i> Preview
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. MySQL Database Certificate -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="cert-card">
+                            <div class="cert-img-container" onclick="openCertModal('Certificate Course in MYSQL', 'media/certificates/mysql-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
+                                <img src="media/certificates/mysql-certificate-ccit.jpg" alt="MySQL Certificate - CCIT">
+                                <div class="cert-overlay">
+                                    <span class="btn btn-gradient btn-sm px-3"><i class="bi bi-zoom-in me-1"></i> View Full Certificate</span>
+                                </div>
+                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-75 border border-info text-info">
+                                    <i class="bi bi-database me-1"></i> Database
+                                </span>
+                            </div>
+
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <span class="badge bg-info bg-opacity-25 text-info fw-semibold px-3 py-1">
+                                        CCIT Institute
+                                    </span>
+                                    <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>Jul 2026</span>
+                                </div>
+
+                                <h5 class="fw-bold text-main mb-2">Certificate Course in 'MYSQL'</h5>
+                                <p class="text-muted small mb-3 flex-grow-1">
+                                    Awarded to <strong>Mr. Vyankateshwar S. Pund</strong> for mastering relational database design, SQL querying, indexing, and normalization.
+                                </p>
+
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
+                                    <span class="badge theme-tech-badge small"><i class="bi bi-database-check text-info me-1"></i>MySQL Verified</span>
+                                    <button class="btn btn-glass btn-sm" onclick="openCertModal('Certificate Course in MYSQL', 'media/certificates/mysql-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
+                                        <i class="bi bi-eye me-1"></i> Preview
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. GitHub & Version Control Certificate -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="cert-card">
+                            <div class="cert-img-container" onclick="openCertModal('Certificate Course in GITHUB', 'media/certificates/github-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
+                                <img src="media/certificates/github-certificate-ccit.jpg" alt="GitHub Certificate - CCIT">
+                                <div class="cert-overlay">
+                                    <span class="btn btn-gradient btn-sm px-3"><i class="bi bi-zoom-in me-1"></i> View Full Certificate</span>
+                                </div>
+                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-75 border border-primary text-primary">
+                                    <i class="bi bi-git me-1"></i> Version Control
+                                </span>
+                            </div>
+
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <span class="badge bg-primary bg-opacity-25 text-primary fw-semibold px-3 py-1">
+                                        CCIT Institute
+                                    </span>
+                                    <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>Jul 2026</span>
+                                </div>
+
+                                <h5 class="fw-bold text-main mb-2">Certificate Course in 'GITHUB'</h5>
+                                <p class="text-muted small mb-3 flex-grow-1">
+                                    Awarded to <strong>Mr. Vyankateshwar S. Pund</strong> for completing practical training in Git workflows, branch strategies, pull requests, and repository management.
+                                </p>
+
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
+                                    <span class="badge theme-tech-badge small"><i class="bi bi-github text-primary me-1"></i>Git Verified</span>
+                                    <button class="btn btn-glass btn-sm" onclick="openCertModal('Certificate Course in GITHUB', 'media/certificates/github-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
+                                        <i class="bi bi-eye me-1"></i> Preview
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. HTML + CSS Web Design Certificate -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="cert-card">
+                            <div class="cert-img-container" onclick="openCertModal('Certificate Course in HTML+CSS', 'media/certificates/html-css-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
+                                <img src="media/certificates/html-css-certificate-ccit.jpg" alt="HTML+CSS Certificate - CCIT">
+                                <div class="cert-overlay">
+                                    <span class="btn btn-gradient btn-sm px-3"><i class="bi bi-zoom-in me-1"></i> View Full Certificate</span>
+                                </div>
+                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-75 border border-danger text-danger">
+                                    <i class="bi bi-filetype-html me-1"></i> Web Foundations
+                                </span>
+                            </div>
+
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <span class="badge bg-danger bg-opacity-25 text-danger fw-semibold px-3 py-1">
+                                        CCIT Institute
+                                    </span>
+                                    <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>Jul 2026</span>
+                                </div>
+
+                                <h5 class="fw-bold text-main mb-2">Certificate Course in 'HTML+CSS'</h5>
+                                <p class="text-muted small mb-3 flex-grow-1">
+                                    Awarded to <strong>Mr. Vyankateshwar S. Pund</strong> for mastering modern responsive web structure, semantic HTML5, CSS3 layouts, and styling.
+                                </p>
+
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
+                                    <span class="badge theme-tech-badge small"><i class="bi bi-code-slash text-danger me-1"></i>HTML/CSS Verified</span>
+                                    <button class="btn btn-glass btn-sm" onclick="openCertModal('Certificate Course in HTML+CSS', 'media/certificates/html-css-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
+                                        <i class="bi bi-eye me-1"></i> Preview
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Certificate Lightbox Modal -->
+    <div class="modal fade" id="certModal" tabindex="-1" aria-labelledby="certModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content glass-card p-2" style="border-radius: 20px; background: var(--bg-card);">
+                <div class="modal-header border-0 pb-0">
+                    <div>
+                        <h5 class="modal-title fw-bold text-main mb-1" id="certModalTitle">Certificate</h5>
+                        <p class="text-muted small mb-0" id="certModalSubtitle">Issuer</p>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-3 text-center">
+                    <img id="certModalImg" src="" alt="Certificate Preview" class="img-fluid rounded-3 shadow-lg" style="max-height: 75vh; width: 100%; object-fit: contain;">
+                </div>
+                <div class="modal-footer border-0 pt-0 d-flex justify-content-between">
+                    <span class="badge theme-tech-badge small" id="certModalDate">Issued 2026</span>
+                    <div class="d-flex gap-2">
+                        <a id="certModalDownload" href="" download class="btn btn-gradient btn-sm">
+                            <i class="bi bi-download me-1"></i> Download Image
+                        </a>
+                        <button type="button" class="btn btn-glass btn-sm" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/918263986554?text=Hi%20Vyankateshwar,%20I%20reviewed%20your%20certificates!" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top" class="back-to-top" title="Back to Top">
+        <i class="bi bi-arrow-up-short fs-3"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand gradient-text fs-3 mb-2 d-block" href="index.html">
+                        Vyankateshwar Pund
+                    </a>
+                    <p class="text-muted small mb-3">
+                        Fresher Python Developer &amp; Django Developer passionate about designing high-performance Django web platforms, 
+                        REST APIs, and relational MySQL database systems.
+                    </p>
+
+                    <!-- Availability Badges -->
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50"><i class="bi bi-briefcase-fill me-1"></i> Open to Full-time</span>
+                        <span class="badge bg-info bg-opacity-25 text-info border border-info border-opacity-50"><i class="bi bi-mortarboard-fill me-1"></i> Open to Internship</span>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <a href="https://github.com/vyankateshwarpund" target="_blank" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/vyankateshwar-pund-7a654632b" target="_blank" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="mailto:pundvyankateshwar@gmail.com" target="_blank" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="Email">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
+                        <a href="tel:+918263986554" target="_blank" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="Phone">
+                            <i class="bi bi-telephone-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3 fw-bold">Quick Navigation</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none">About Me</a></li>
+                        <li class="mb-2"><a href="skills.html" class="text-muted text-decoration-none">Skills &amp; Metrics</a></li>
+                        <li class="mb-2"><a href="projects.html" class="text-muted text-decoration-none">Projects Showcase</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3 fw-bold">Portfolio Apps</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="resume.html" class="text-muted text-decoration-none">Resume Preview</a></li>
+                        <li class="mb-2"><a href="certificates.html" class="text-muted text-decoration-none">Certificates</a></li>
+                        <li class="mb-2"><a href="achievements.html" class="text-muted text-decoration-none">Achievements</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="text-white mb-3 fw-bold">Contact Details</h6>
+                    <ul class="list-unstyled small text-muted mb-3">
+                        <li class="mb-2"><i class="bi bi-envelope-fill text-warning me-2"></i> pundvyankateshwar@gmail.com</li>
+                        <li class="mb-2"><i class="bi bi-telephone-fill text-info me-2"></i> +91 8263986554</li>
+                        <li class="mb-2"><i class="bi bi-geo-alt-fill text-success me-2"></i> Amravati, Maharashtra, India</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-gradient btn-sm w-100"><i class="bi bi-chat-left-dots me-1"></i> Send a Message</a>
+                </div>
+            </div>
+
+            <hr class="my-4 border-secondary opacity-25">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <span class="text-muted small">&copy; 2026 Vyankateshwar Santosh Pund. Made with <span class="text-danger">❤️ Modern Web</span></span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <span class="badge bg-dark border border-secondary text-muted me-2"><i class="bi bi-shield-check text-success"></i> Production Ready</span>
+                    <span class="badge bg-dark border border-secondary text-muted"><i class="bi bi-patch-check text-info"></i> 5 Verified Certificates</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="static/js/main.js"></script>
+    <script src="static/js/github.js"></script>
+
+    <script>
+    function openCertModal(title, imgSrc, issuer, date) {
+        document.getElementById('certModalTitle').textContent = title;
+        document.getElementById('certModalSubtitle').textContent = issuer;
+        document.getElementById('certModalImg').src = imgSrc;
+        document.getElementById('certModalDate').textContent = 'Issued: ' + date;
+        document.getElementById('certModalDownload').href = imgSrc;
+        const certModal = new bootstrap.Modal(document.getElementById('certModal'));
+        certModal.show();
+    }
+    </script>
+</body>
+</html>

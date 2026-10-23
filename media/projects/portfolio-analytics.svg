@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-port" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#180e29" />
+      <stop offset="100%" stop-color="#2c164d" />
+    </linearGradient>
+    <linearGradient id="chart-line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="chart-area-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(168, 85, 247, 0.4)" />
+      <stop offset="100%" stop-color="rgba(168, 85, 247, 0.0)" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="360" rx="16" fill="url(#bg-grad-port)" />
+  <rect x="0.5" y="0.5" width="599" height="359" rx="15.5" fill="none" stroke="rgba(255,255,255,0.12)" />
+
+  <!-- Window Header -->
+  <rect width="600" height="42" rx="16" fill="#25123d" />
+  <rect y="30" width="600" height="12" fill="#25123d" />
+  <circle cx="24" cy="21" r="6" fill="#ef4444" />
+  <circle cx="44" cy="21" r="6" fill="#f59e0b" />
+  <circle cx="64" cy="21" r="6" fill="#10b981" />
+  
+  <rect x="120" y="10" width="360" height="22" rx="6" fill="#150a24" />
+  <text x="300" y="25" fill="#e9d5ff" font-family="'Fira Code', monospace" font-size="11" text-anchor="middle">vyankateshwar.dev/analytics/dashboard</text>
+
+  <!-- Analytics Stats Row -->
+  <g transform="translate(30, 58)">
+    <!-- Stat 1 -->
+    <rect width="168" height="64" rx="10" fill="#1a0f2e" stroke="rgba(255,255,255,0.08)" />
+    <text x="16" y="26" fill="#c084fc" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="10">TOTAL RECRUITER VISITS</text>
+    <text x="16" y="50" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20">1,428</text>
+    <text x="110" y="50" fill="#34d399" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11">+24.8% ↑</text>
+
+    <!-- Stat 2 -->
+    <rect x="186" width="168" height="64" rx="10" fill="#1a0f2e" stroke="rgba(255,255,255,0.08)" />
+    <text x="202" y="26" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="10">RESUME DOWNLOADS</text>
+    <text x="202" y="50" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20">342</text>
+    <text x="296" y="50" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11">+18.2% ↑</text>
+
+    <!-- Stat 3 -->
+    <rect x="372" width="168" height="64" rx="10" fill="#1a0f2e" stroke="rgba(255,255,255,0.08)" />
+    <text x="388" y="26" fill="#f472b6" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="10">AVG DWELL TIME</text>
+    <text x="388" y="50" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20">4m 12s</text>
+    <text x="490" y="50" fill="#f472b6" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11">Active</text>
+  </g>
+
+  <!-- Interactive Chart Area -->
+  <g transform="translate(30, 136)">
+    <rect width="540" height="194" rx="12" fill="#140a24" stroke="rgba(168,85,247,0.25)" />
+    
+    <text x="20" y="30" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13">Traffic &amp; Engagement Overview (Chart.js)</text>
+    <text x="420" y="30" fill="#a855f7" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11">● Python/Django SaaS</text>
+
+    <!-- Chart Grid Lines -->
+    <line x1="20" y1="60" x2="520" y2="60" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4" />
+    <line x1="20" y1="100" x2="520" y2="100" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4" />
+    <line x1="20" y1="140" x2="520" y2="140" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4" />
+
+    <!-- Wave Area -->
+    <polygon points="20,160 50,135 110,145 170,110 230,120 290,85 350,95 410,65 470,80 520,50 520,170 20,170" fill="url(#chart-area-grad)" />
+
+    <!-- Wave Line -->
+    <polyline points="20,160 50,135 110,145 170,110 230,120 290,85 350,95 410,65 470,80 520,50" fill="none" stroke="url(#chart-line-grad)" stroke-width="3.5" />
+
+    <!-- Data Points -->
+    <circle cx="170" cy="110" r="4.5" fill="#ffffff" stroke="#a855f7" stroke-width="2.5" />
+    <circle cx="290" cy="85" r="4.5" fill="#ffffff" stroke="#c084fc" stroke-width="2.5" />
+    <circle cx="410" cy="65" r="4.5" fill="#ffffff" stroke="#ec4899" stroke-width="2.5" />
+    <circle cx="520" cy="50" r="5" fill="#ffffff" stroke="#ec4899" stroke-width="3" />
+
+    <!-- X-axis labels -->
+    <text x="50" y="184" fill="#64748b" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Mon</text>
+    <text x="170" y="184" fill="#64748b" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Wed</text>
+    <text x="290" y="184" fill="#64748b" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Fri</text>
+    <text x="410" y="184" fill="#64748b" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Sun</text>
+    <text x="505" y="184" fill="#c084fc" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10">Today</text>
+  </g>
+</svg>

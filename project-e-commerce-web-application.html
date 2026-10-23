@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPCart &ndash; E-Commerce Web Application | Vyankateshwar Pund</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Production Django E-Commerce application with dynamic catalog, persistent shopping cart, MySQL database, and customer authentication, deployed live on PythonAnywhere.">
+    <meta name="keywords" content="Django E-Commerce, SPCart, Python Web Development, MySQL, Shopping Cart, Bootstrap 5, PythonAnywhere, Vyankateshwar Pund">
+    <meta name="author" content="Vyankateshwar Santosh Pund">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="SPCart &ndash; E-Commerce Web Application">
+    <meta property="og:description" content="Production-grade Django E-Commerce platform with product catalog, cart session management, and live deployment.">
+    <meta property="og:url" content="https://saurav2005.pythonanywhere.com/">
+    <meta property="og:image" content="media/projects/e-commerce-web-application.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SPCart E-Commerce Web Application",
+      "operatingSystem": "Web Application",
+      "applicationCategory": "E-Commerce",
+      "author": {
+        "@type": "Person",
+        "name": "Vyankateshwar Santosh Pund"
+      },
+      "url": "https://saurav2005.pythonanywhere.com/"
+    }
+    </script>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="static/manifest.json">
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Preloader Screen -->
+    <div id="preloader">
+        <div class="preloader-logo">VP</div>
+        <div class="small text-muted mt-2 fw-semibold">Loading Project Architecture...</div>
+        <div class="preloader-bar">
+            <div class="preloader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Gradient Blobs Background -->
+    <div class="gradient-blob blob-1"></div>
+    <div class="gradient-blob blob-2"></div>
+
+    <!-- Canvas Particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor d-none d-md-block"></div>
+    <div class="custom-cursor-dot d-none d-md-block"></div>
+
+    <!-- Floating Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-floating">
+        <div class="container-fluid">
+            <a class="navbar-brand gradient-text" href="index.html">
+                <i class="bi bi-terminal-fill me-2"></i>VP.dev
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavbar" aria-label="Toggle navigation">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="portfolioNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2">
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle-btn" class="btn btn-glass btn-sm px-3" title="Toggle Light/Dark Theme" aria-label="Toggle light or dark theme">
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
+
+                    <!-- Resume CTA -->
+                    <a href="resume.html" class="btn btn-gradient btn-sm px-3">
+                        <i class="bi bi-download me-1"></i> CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Page Content -->
+    <main style="min-height: 80vh;">
+        <section class="py-5 mt-5">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+                    <a href="projects.html" class="btn btn-glass btn-sm"><i class="bi bi-arrow-left me-1"></i> Back to Projects</a>
+                    <a href="https://saurav2005.pythonanywhere.com/" target="_blank" class="btn btn-gradient btn-sm">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> Open Live App (saurav2005.pythonanywhere.com)
+                    </a>
+                </div>
+
+                <div class="row gy-4">
+                    <div class="col-lg-8">
+                        <div class="glass-card mb-4">
+                            
+                            <!-- E-Commerce Live Application Wallpaper / Screenshot -->
+                            <div class="overflow-hidden rounded-3 mb-4 border border-secondary border-opacity-25 shadow-lg" style="max-height: 440px; background:#0f172a;">
+                                <a href="https://saurav2005.pythonanywhere.com/" target="_blank" title="Click to launch live E-Commerce website">
+                                    <img src="media/projects/e-commerce-web-application.png" alt="SPCart E-Commerce Web Application Live Wallpaper" class="img-fluid w-100" style="object-fit: cover; max-height: 440px; display: block;">
+                                </a>
+                            </div>
+
+                            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <span class="badge bg-primary bg-opacity-25 text-primary px-3 py-2 border border-primary border-opacity-50">
+                                        Full Stack Web App
+                                    </span>
+                                    <a href="https://saurav2005.pythonanywhere.com/" target="_blank" class="badge bg-success bg-opacity-25 text-success px-3 py-2 text-decoration-none border border-success border-opacity-50">
+                                        <i class="bi bi-broadcast me-1"></i> Live on PythonAnywhere
+                                    </a>
+                                </div>
+                                <div class="d-flex gap-3 text-muted small">
+                                    <span><i class="bi bi-heart-fill text-danger me-1"></i>54 Likes</span>
+                                </div>
+                            </div>
+
+                            <h2 class="fw-bold text-white mb-2">SPCart &ndash; E-Commerce Web Application</h2>
+                            <p class="lead text-muted mb-4">Full-featured online shopping platform with dynamic product catalog, multi-category filtering, persistent shopping cart, customer checkout, and secure user authentication.</p>
+
+                            <h5 class="fw-bold text-white mb-3">Project Overview &amp; Architecture</h5>
+                            <p class="text-muted leading-relaxed mb-4">
+                                SPCart is a production-ready, full-stack E-Commerce web application developed with <strong>Python</strong>, <strong>Django</strong>, <strong>MySQL</strong>, and <strong>Bootstrap 5</strong>, deployed live on <strong>PythonAnywhere</strong>.
+                                The application implements a complete end-to-end shopping workflow: product catalog with instant search, category filtering (Electronics, Mobiles, Audio, Gaming, Wearables), session-based cart management, customer checkout, and a secure Django Admin portal for product and order management.
+                            </p>
+
+                            <h5 class="fw-bold text-white mb-3">Key Features &amp; Technical Scope</h5>
+                            <div class="glass-card mb-4 border-start border-4 border-info">
+                                <ul class="list-unstyled text-muted small mb-0 d-flex flex-column gap-2">
+                                    <li><i class="bi bi-check-circle-fill text-info me-2"></i><strong>Dynamic Product Catalog:</strong> Multi-category product display with instant search and filter mechanisms.</li>
+                                    <li><i class="bi bi-check-circle-fill text-info me-2"></i><strong>Interactive Shopping Cart:</strong> Session-backed cart management with item quantity adjustment and total price calculation.</li>
+                                    <li><i class="bi bi-check-circle-fill text-info me-2"></i><strong>Customer Authentication:</strong> Secure Django auth for customer registration, login, logout, and order histories.</li>
+                                    <li><i class="bi bi-check-circle-fill text-info me-2"></i><strong>Admin Inventory Control:</strong> Comprehensive backend dashboard for managing products, categories, stock, and orders.</li>
+                                    <li><i class="bi bi-check-circle-fill text-info me-2"></i><strong>Live Cloud Deployment:</strong> Hosted and active in production on <code>pythonanywhere.com</code>.</li>
+                                </ul>
+                            </div>
+
+                            <h5 class="fw-bold text-white mb-3">Database Architecture &amp; Data Models</h5>
+                            <div class="glass-card mb-4">
+                                <ul class="list-unstyled text-muted small mb-0 d-flex flex-column gap-2">
+                                    <li><i class="bi bi-database-check text-success me-2"></i><strong>Category Model:</strong> Slugified URLs, hierarchical categorization for Mobiles, Electronics, Audio, Wearables.</li>
+                                    <li><i class="bi bi-database-check text-success me-2"></i><strong>Product Model:</strong> SKU, pricing, discount calculation, image storage, stock availability.</li>
+                                    <li><i class="bi bi-database-check text-success me-2"></i><strong>Cart &amp; CartItem Models:</strong> Session/User linked cart line items with real-time subtotal computation.</li>
+                                    <li><i class="bi bi-database-check text-success me-2"></i><strong>Order &amp; OrderItem Models:</strong> Transaction tracking with shipping address, order status, and timestamps.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Info -->
+                    <div class="col-lg-4">
+                        <div class="glass-card mb-4 position-sticky" style="top: 100px;">
+                            <h5 class="fw-bold text-white mb-3">Project Metadata</h5>
+
+                            <div class="mb-4">
+                                <span class="text-muted small d-block mb-2 fw-semibold">Tech Stack Used</span>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-dark border border-secondary text-info px-3 py-2">
+                                        <i class="bi bi-filetype-py me-1"></i> Python 3
+                                    </span>
+                                    <span class="badge bg-dark border border-secondary text-info px-3 py-2">
+                                        <i class="bi bi-box-seam me-1"></i> Django
+                                    </span>
+                                    <span class="badge bg-dark border border-secondary text-info px-3 py-2">
+                                        <i class="bi bi-database me-1"></i> MySQL
+                                    </span>
+                                    <span class="badge bg-dark border border-secondary text-info px-3 py-2">
+                                        <i class="bi bi-bootstrap me-1"></i> Bootstrap 5
+                                    </span>
+                                    <span class="badge bg-dark border border-secondary text-info px-3 py-2">
+                                        <i class="bi bi-filetype-js me-1"></i> JavaScript
+                                    </span>
+                                    <span class="badge bg-dark border border-secondary text-info px-3 py-2">
+                                        <i class="bi bi-cloud-arrow-up me-1"></i> PythonAnywhere
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="d-grid gap-2 mb-4">
+                                <a href="https://saurav2005.pythonanywhere.com/" target="_blank" class="btn btn-gradient w-100 py-2">
+                                    <i class="bi bi-box-arrow-up-right me-2"></i> Launch Live Website
+                                </a>
+                                <a href="https://github.com/vyankateshwarpund" target="_blank" class="btn btn-glass w-100 py-2">
+                                    <i class="bi bi-github me-2"></i> View GitHub Source
+                                </a>
+                                <button class="btn btn-outline-danger w-100 btn-like-project" data-project-id="2">
+                                    <i class="bi bi-heart-fill me-2"></i> Like Project (<span class="likes-count">54</span>)
+                                </button>
+                            </div>
+
+                            <hr class="border-secondary opacity-25 mb-4">
+
+                            <div>
+                                <span class="text-muted small d-block mb-1 fw-semibold">Live Production URL</span>
+                                <a href="https://saurav2005.pythonanywhere.com/" target="_blank" class="small text-primary text-break fw-semibold">
+                                    https://saurav2005.pythonanywhere.com/
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/918263986554?text=Hi%20Vyankateshwar,%20I%20reviewed%20your%20portfolio!" target="_blank" class="whatsapp-float" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Back to top button -->
+    <div id="back-to-top" class="back-to-top" title="Back to top" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </div>
+
+    <!-- Production Footer -->
+    <footer class="footer-modern py-5 border-top border-secondary border-opacity-25">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand gradient-text fs-3 mb-2 d-block" href="index.html">
+                        Vyankateshwar Pund
+                    </a>
+                    <p class="text-muted small mb-3">
+                        Python &amp; Django Developer specializing in robust backend architectures, high-performance REST APIs, and database engineering.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="https://github.com/vyankateshwarpund" target="_blank" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="GitHub" aria-label="GitHub Profile">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/vyankateshwar-pund-7a654632b" target="_blank" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="LinkedIn" aria-label="LinkedIn Profile">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="mailto:pundvyankateshwar@gmail.com" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="Email" aria-label="Send Email">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
+                        <a href="tel:+918263986554" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="Phone" aria-label="Call Phone">
+                            <i class="bi bi-telephone-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3 fw-bold">Quick Navigation</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none">About Me</a></li>
+                        <li class="mb-2"><a href="skills.html" class="text-muted text-decoration-none">Skills &amp; Metrics</a></li>
+                        <li class="mb-2"><a href="projects.html" class="text-muted text-decoration-none">Projects Showcase</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3 fw-bold">Portfolio Apps</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="resume.html" class="text-muted text-decoration-none">Resume Preview</a></li>
+                        <li class="mb-2"><a href="certificates.html" class="text-muted text-decoration-none">Certificates</a></li>
+                        <li class="mb-2"><a href="achievements.html" class="text-muted text-decoration-none">Achievements</a></li>
+                        <li class="mb-2"><a href="gallery.html" class="text-muted text-decoration-none">Campus &amp; Events</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="text-white mb-3 fw-bold">Contact Details</h6>
+                    <ul class="list-unstyled small text-muted mb-3">
+                        <li class="mb-2"><i class="bi bi-envelope-fill text-warning me-2"></i> pundvyankateshwar@gmail.com</li>
+                        <li class="mb-2"><i class="bi bi-telephone-fill text-info me-2"></i> +91 8263986554</li>
+                        <li class="mb-2"><i class="bi bi-geo-alt-fill text-success me-2"></i> Amravati, Maharashtra, India</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-gradient btn-sm w-100"><i class="bi bi-chat-left-dots me-1"></i> Send a Message</a>
+                </div>
+            </div>
+
+            <hr class="my-4 border-secondary opacity-25">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <p class="small text-muted mb-0">
+                        &copy; 2026 Vyankateshwar Santosh Pund &bull; Built with Python &amp; Django Passion
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small text-muted mb-0">
+                        Amravati, Maharashtra, India &bull; <a href="resume.html" class="text-primary text-decoration-none fw-semibold">Download ATS CV</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Main JavaScript -->
+    <script src="static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Skills & Recruiter Metrics | Vyankateshwar Pund - Python & Django Developer</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Technical skills, recruiter metrics, and technology proficiency of Vyankateshwar Santosh Pund - Python Developer, Django Developer, REST API Specialist, and MySQL Developer.">
+    <meta name="keywords" content="Vyankateshwar Pund, Python Developer, Django Developer, REST API, MySQL, Django ORM, Postman, Software Engineer, Amravati, India">
+    <meta name="author" content="Vyankateshwar Santosh Pund">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Technical Skills & Metrics | Vyankateshwar Pund - Python & Django Developer">
+    <meta property="og:description" content="Detailed technical proficiency, verified project metrics, and problem-solving benchmarks in Python, Django, REST APIs, and MySQL.">
+    <meta property="og:url" content="https://vyankateshwarpund.github.io/skills.html">
+    <meta property="og:image" content="media/profile/vyankateshwar_profile.jpg">
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Vyankateshwar Santosh Pund",
+      "jobTitle": "Python & Django Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "CCIT Institute"
+      },
+      "url": "https://vyankateshwarpund.github.io/skills.html",
+      "sameAs": [
+        "https://github.com/vyankateshwarpund",
+        "https://linkedin.com/in/vyankateshwar-pund-7a654632b"
+      ],
+      "email": "pundvyankateshwar@gmail.com",
+      "telephone": "+91 8263986554",
+      "knowsAbout": ["Python", "Django", "Django REST Framework", "MySQL", "Django ORM", "Git", "GitHub", "Postman", "HTML5", "CSS3", "JavaScript"]
+    }
+    </script>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="static/manifest.json">
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 & Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-logo">VP</div>
+        <div class="small text-muted mt-2 fw-semibold">Loading Skills &amp; Metrics...</div>
+        <div class="preloader-bar">
+            <div class="preloader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Gradient Blobs Background -->
+    <div class="gradient-blob blob-1"></div>
+    <div class="gradient-blob blob-2"></div>
+
+    <!-- Canvas Particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor d-none d-md-block"></div>
+    <div class="custom-cursor-dot d-none d-md-block"></div>
+
+    <!-- Floating Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-floating">
+        <div class="container-fluid">
+            <a class="navbar-brand gradient-text" href="index.html">
+                <i class="bi bi-terminal-fill me-2"></i>VP.dev
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavbar" aria-label="Toggle navigation">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="portfolioNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2">
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle-btn" class="btn btn-glass btn-sm px-3" title="Toggle Light/Dark Theme" aria-label="Toggle light or dark theme">
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
+
+                    <!-- Resume CTA -->
+                    <a href="resume.html" class="btn btn-gradient btn-sm px-3">
+                        <i class="bi bi-download me-1"></i> CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Page Content -->
+    <main style="min-height: 80vh;">
+        <section class="py-5 mt-5">
+            <div class="container mt-4">
+                
+                <!-- Page Header -->
+                <div class="text-center max-w-700 mx-auto mb-5">
+                    <div class="badge-pill-glow mb-3">
+                        <i class="bi bi-code-slash text-primary"></i>
+                        <span>Python &amp; Django Core Specialization</span>
+                    </div>
+                    <h1 class="display-5 fw-extrabold text-main mb-3">
+                        Technical Skills &amp; <span class="gradient-text">Recruiter Metrics</span>
+                    </h1>
+                    <p class="text-muted fs-6 mb-0">
+                        Demonstrated engineering capability in Python 3, Django web architecture, RESTful API design, and MySQL database optimization backed by practical projects and verified problem solving.
+                    </p>
+                </div>
+
+                <!-- Recruiter Quick Summary Cards (4 Columns) -->
+                <div class="row g-3 mb-5">
+                    <div class="col-6 col-lg-3">
+                        <div class="metric-card-modern">
+                            <div class="metric-number-glow">3+ Mos</div>
+                            <h6 class="fw-bold text-main mb-1">Production Experience</h6>
+                            <p class="text-muted extra-small mb-0">CCIT Python &amp; Django Web Development Internship</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="metric-card-modern">
+                            <div class="metric-number-glow">120+</div>
+                            <h6 class="fw-bold text-main mb-1">Problems Solved</h6>
+                            <p class="text-muted extra-small mb-0">Python DSA, OOP patterns, and SQL logic challenges</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="metric-card-modern">
+                            <div class="metric-number-glow">8+</div>
+                            <h6 class="fw-bold text-main mb-1">Django Projects</h6>
+                            <p class="text-muted extra-small mb-0">Full-stack web apps with auth, forms &amp; MySQL DB</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="metric-card-modern">
+                            <div class="metric-number-glow">40+</div>
+                            <h6 class="fw-bold text-main mb-1">REST Endpoints</h6>
+                            <p class="text-muted extra-small mb-0">Tested &amp; documented APIs with JWT &amp; Postman</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 1: Python & Django Core Specialization -->
+                <div class="mb-5">
+                    <div class="category-heading">
+                        <div class="category-icon-circle text-primary">
+                            <i class="bi bi-terminal"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold text-main mb-0">Python &amp; Django Core Specialization</h3>
+                            <small class="text-muted">Core backend development, web architecture, and REST API frameworks</small>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Python Card -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="skill-card">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="skill-icon-box text-primary">
+                                                <i class="bi bi-filetype-py"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="fw-bold text-main mb-0">Python 3</h5>
+                                                <small class="text-muted">Core Programming Language</small>
+                                            </div>
+                                        </div>
+                                        <span class="skill-badge-level badge-level-primary">Advanced</span>
+                                    </div>
+
+                                    <p class="text-muted small mb-3">
+                                        Deep knowledge of Object-Oriented Programming (OOP), modular architecture, data structures, decorators, and writing PEP 8 compliant clean code.
+                                    </p>
+
+                                    <!-- Recruiter Metrics Grid -->
+                                    <div class="skill-metrics-grid">
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Experience</span>
+                                            <span class="metric-val text-primary">3+ Mos</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Problems</span>
+                                            <span class="metric-val text-info">120+ Solved</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Projects</span>
+                                            <span class="metric-val text-success">8 Repos</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tech Tags -->
+                                    <div class="skill-tags-list">
+                                        <span class="skill-tag-pill">OOP &amp; Inheritance</span>
+                                        <span class="skill-tag-pill">Data Structures</span>
+                                        <span class="skill-tag-pill">Decorators</span>
+                                        <span class="skill-tag-pill">Exception Handling</span>
+                                        <span class="skill-tag-pill">Clean PEP 8 Code</span>
+                                    </div>
+                                </div>
+
+                                <!-- Progress Bar with Percentage -->
+                                <div class="skill-progress-wrap">
+                                    <div class="d-flex justify-content-between small fw-semibold mb-1">
+                                        <span class="text-muted">Proficiency</span>
+                                        <span class="text-primary">92%</span>
+                                    </div>
+                                    <div class="skill-progress-bar">
+                                        <div class="skill-progress-fill python-fill" style="width: 92%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Django Card -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="skill-card">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="skill-icon-box text-success">
+                                                <i class="bi bi-box-seam"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="fw-bold text-main mb-0">Django</h5>
+                                                <small class="text-muted">High-Level Web Framework</small>
+                                            </div>
+                                        </div>
+                                        <span class="skill-badge-level badge-level-success">Advanced</span>
+                                    </div>
+
+                                    <p class="text-muted small mb-3">
+                                        Engineered robust full-stack web applications using MVT architecture, built-in User Authentication, secure session management, Forms, and customized Admin.
+                                    </p>
+
+                                    <!-- Recruiter Metrics Grid -->
+                                    <div class="skill-metrics-grid">
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Experience</span>
+                                            <span class="metric-val text-primary">3+ Mos</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Features</span>
+                                            <span class="metric-val text-info">80+ Built</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Web Apps</span>
+                                            <span class="metric-val text-success">8 Projects</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tech Tags -->
+                                    <div class="skill-tags-list">
+                                        <span class="skill-tag-pill">MVT Architecture</span>
+                                        <span class="skill-tag-pill">Auth &amp; Permissions</span>
+                                        <span class="skill-tag-pill">Django Forms</span>
+                                        <span class="skill-tag-pill">Custom Admin</span>
+                                        <span class="skill-tag-pill">Middleware</span>
+                                    </div>
+                                </div>
+
+                                <!-- Progress Bar with Percentage -->
+                                <div class="skill-progress-wrap">
+                                    <div class="d-flex justify-content-between small fw-semibold mb-1">
+                                        <span class="text-muted">Proficiency</span>
+                                        <span class="text-success">90%</span>
+                                    </div>
+                                    <div class="skill-progress-bar">
+                                        <div class="skill-progress-fill django-fill" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Django REST Framework Card -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="skill-card">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="skill-icon-box text-danger">
+                                                <i class="bi bi-cpu-fill"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="fw-bold text-main mb-0">Django REST Framework</h5>
+                                                <small class="text-muted">RESTful API Engine</small>
+                                            </div>
+                                        </div>
+                                        <span class="skill-badge-level badge-level-danger">Advanced</span>
+                                    </div>
+
+                                    <p class="text-muted small mb-3">
+                                        Designed scalable RESTful APIs with ModelSerializers, JWT token authentication, generic ViewSets, custom permissions, and Swagger/OpenAPI documentation.
+                                    </p>
+
+                                    <!-- Recruiter Metrics Grid -->
+                                    <div class="skill-metrics-grid">
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Experience</span>
+                                            <span class="metric-val text-primary">3+ Mos</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Endpoints</span>
+                                            <span class="metric-val text-info">40+ Built</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Services</span>
+                                            <span class="metric-val text-success">6 Projects</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tech Tags -->
+                                    <div class="skill-tags-list">
+                                        <span class="skill-tag-pill">ModelSerializers</span>
+                                        <span class="skill-tag-pill">JWT Tokens</span>
+                                        <span class="skill-tag-pill">Generic ViewSets</span>
+                                        <span class="skill-tag-pill">CORS &amp; Auth</span>
+                                        <span class="skill-tag-pill">Pagination</span>
+                                    </div>
+                                </div>
+
+                                <!-- Progress Bar with Percentage -->
+                                <div class="skill-progress-wrap">
+                                    <div class="d-flex justify-content-between small fw-semibold mb-1">
+                                        <span class="text-muted">Proficiency</span>
+                                        <span class="text-danger">88%</span>
+                                    </div>
+                                    <div class="skill-progress-bar">
+                                        <div class="skill-progress-fill drf-fill" style="width: 88%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 2: Relational Databases & SQL Optimization -->
+                <div class="mb-5">
+                    <div class="category-heading">
+                        <div class="category-icon-circle text-info">
+                            <i class="bi bi-database-gear"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold text-main mb-0">Relational Databases &amp; SQL Optimization</h3>
+                            <small class="text-muted">Schema modeling, relational normalization, and Django ORM query tuning</small>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- MySQL Relational Database Card -->
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="skill-icon-box text-info">
+                                                <i class="bi bi-database-fill"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="fw-bold text-main mb-0">MySQL Relational Database</h5>
+                                                <small class="text-muted">RDBMS &amp; SQL Schemas</small>
+                                            </div>
+                                        </div>
+                                        <span class="skill-badge-level badge-level-info">Advanced</span>
+                                    </div>
+
+                                    <p class="text-muted small mb-3">
+                                        Proficient in designing normalized relational schemas (1NF, 2NF, 3NF), establishing foreign key integrity, writing complex joins, indexes, and transactional queries.
+                                    </p>
+
+                                    <!-- Recruiter Metrics Grid -->
+                                    <div class="skill-metrics-grid">
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Experience</span>
+                                            <span class="metric-val text-primary">3+ Mos</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Schemas</span>
+                                            <span class="metric-val text-info">25+ Tables</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Production</span>
+                                            <span class="metric-val text-success">8 Databases</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tech Tags -->
+                                    <div class="skill-tags-list">
+                                        <span class="skill-tag-pill">Database Normalization</span>
+                                        <span class="skill-tag-pill">Foreign Keys &amp; Joins</span>
+                                        <span class="skill-tag-pill">Indexing &amp; Performance</span>
+                                        <span class="skill-tag-pill">ACID Transactions</span>
+                                    </div>
+                                </div>
+
+                                <!-- Progress Bar with Percentage -->
+                                <div class="skill-progress-wrap">
+                                    <div class="d-flex justify-content-between small fw-semibold mb-1">
+                                        <span class="text-muted">Proficiency</span>
+                                        <span class="text-info">88%</span>
+                                    </div>
+                                    <div class="skill-progress-bar">
+                                        <div class="skill-progress-fill mysql-fill" style="width: 88%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Django ORM & Query Tuning Card -->
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="skill-icon-box text-warning">
+                                                <i class="bi bi-speedometer2"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="fw-bold text-main mb-0">Django ORM Optimization</h5>
+                                                <small class="text-muted">Query Efficiency &amp; Data Layer</small>
+                                            </div>
+                                        </div>
+                                        <span class="skill-badge-level badge-level-warning">Advanced</span>
+                                    </div>
+
+                                    <p class="text-muted small mb-3">
+                                        Skilled in eliminating N+1 query bottlenecks using <code>select_related</code> and <code>prefetch_related</code>, building complex lookups with <code>Q</code> and <code>F</code> expressions, and database migrations.
+                                    </p>
+
+                                    <!-- Recruiter Metrics Grid -->
+                                    <div class="skill-metrics-grid">
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Experience</span>
+                                            <span class="metric-val text-primary">3+ Mos</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Optimization</span>
+                                            <span class="metric-val text-info">35+ Queries</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Migrations</span>
+                                            <span class="metric-val text-success">50+ Migrations</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tech Tags -->
+                                    <div class="skill-tags-list">
+                                        <span class="skill-tag-pill">select_related</span>
+                                        <span class="skill-tag-pill">prefetch_related</span>
+                                        <span class="skill-tag-pill">Q &amp; F Expressions</span>
+                                        <span class="skill-tag-pill">Schema Migrations</span>
+                                    </div>
+                                </div>
+
+                                <!-- Progress Bar with Percentage -->
+                                <div class="skill-progress-wrap">
+                                    <div class="d-flex justify-content-between small fw-semibold mb-1">
+                                        <span class="text-muted">Proficiency</span>
+                                        <span class="text-warning">86%</span>
+                                    </div>
+                                    <div class="skill-progress-bar">
+                                        <div class="skill-progress-fill" style="width: 86%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 3: Developer Tools & API Testing -->
+                <div class="mb-5">
+                    <div class="category-heading">
+                        <div class="category-icon-circle text-success">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold text-main mb-0">Developer Tools &amp; API Verification</h3>
+                            <small class="text-muted">Version control, collaborative workflows, and automated endpoint verification</small>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Git & GitHub Card -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="skill-card">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="skill-icon-box text-danger">
+                                                <i class="bi bi-git"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="fw-bold text-main mb-0">Git &amp; GitHub</h5>
+                                                <small class="text-muted">Version Control &amp; CI</small>
+                                            </div>
+                                        </div>
+                                        <span class="skill-badge-level badge-level-danger">Advanced</span>
+                                    </div>
+
+                                    <p class="text-muted small mb-3">
+                                        Proficient with Git branching, pull requests, resolving merge conflicts, collaborative code reviews, and structured commit history across 12+ public repositories.
+                                    </p>
+
+                                    <!-- Recruiter Metrics Grid -->
+                                    <div class="skill-metrics-grid">
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Experience</span>
+                                            <span class="metric-val text-primary">3+ Mos</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Commits</span>
+                                            <span class="metric-val text-info">520+ Active</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Repos</span>
+                                            <span class="metric-val text-success">12+ Repos</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tech Tags -->
+                                    <div class="skill-tags-list">
+                                        <span class="skill-tag-pill">Branching Workflows</span>
+                                        <span class="skill-tag-pill">Pull Requests</span>
+                                        <span class="skill-tag-pill">Conflict Resolution</span>
+                                        <span class="skill-tag-pill">Open Source</span>
+                                    </div>
+                                </div>
+
+                                <div class="skill-progress-wrap">
+                                    <div class="d-flex justify-content-between small fw-semibold mb-1">
+                                        <span class="text-muted">Proficiency</span>
+                                        <span class="text-danger">88%</span>
+                                    </div>
+                                    <div class="skill-progress-bar">
+                                        <div class="skill-progress-fill git-fill" style="width: 88%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Postman API Testing Card -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="skill-card">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="skill-icon-box text-warning">
+                                                <i class="bi bi-send-check-fill"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="fw-bold text-main mb-0">Postman</h5>
+                                                <small class="text-muted">API Testing &amp; Suites</small>
+                                            </div>
+                                        </div>
+                                        <span class="skill-badge-level badge-level-warning">Advanced</span>
+                                    </div>
+
+                                    <p class="text-muted small mb-3">
+                                        Expert at creating API test collections, managing environment variables, validating HTTP response schemas, status code assertions, and bearer token handling.
+                                    </p>
+
+                                    <!-- Recruiter Metrics Grid -->
+                                    <div class="skill-metrics-grid">
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Experience</span>
+                                            <span class="metric-val text-primary">3+ Mos</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Collections</span>
+                                            <span class="metric-val text-info">6 Suites</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Endpoints</span>
+                                            <span class="metric-val text-success">40+ Tested</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tech Tags -->
+                                    <div class="skill-tags-list">
+                                        <span class="skill-tag-pill">Test Collections</span>
+                                        <span class="skill-tag-pill">Environment Vars</span>
+                                        <span class="skill-tag-pill">Status Assertions</span>
+                                        <span class="skill-tag-pill">Payload Tests</span>
+                                    </div>
+                                </div>
+
+                                <div class="skill-progress-wrap">
+                                    <div class="d-flex justify-content-between small fw-semibold mb-1">
+                                        <span class="text-muted">Proficiency</span>
+                                        <span class="text-warning">88%</span>
+                                    </div>
+                                    <div class="skill-progress-bar">
+                                        <div class="skill-progress-fill" style="width: 88%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- VS Code & Development Environment -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="skill-card">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="skill-icon-box text-primary">
+                                                <i class="bi bi-window-sidebar"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="fw-bold text-main mb-0">VS Code &amp; Tooling</h5>
+                                                <small class="text-muted">IDE &amp; Virtual Environments</small>
+                                            </div>
+                                        </div>
+                                        <span class="skill-badge-level badge-level-primary">Advanced</span>
+                                    </div>
+
+                                    <p class="text-muted small mb-3">
+                                        Optimized Python development using VS Code, Pylance type checking, autopep8 / black formatting, virtualenv isolation, and breakpoint debugging.
+                                    </p>
+
+                                    <!-- Recruiter Metrics Grid -->
+                                    <div class="skill-metrics-grid">
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Experience</span>
+                                            <span class="metric-val text-primary">1+ Year</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Tooling</span>
+                                            <span class="metric-val text-info">Pylance &amp; Pip</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Workflow</span>
+                                            <span class="metric-val text-success">Automated</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tech Tags -->
+                                    <div class="skill-tags-list">
+                                        <span class="skill-tag-pill">Virtualenv</span>
+                                        <span class="skill-tag-pill">Pylance &amp; Linting</span>
+                                        <span class="skill-tag-pill">CLI &amp; Bash</span>
+                                        <span class="skill-tag-pill">Git Lens</span>
+                                    </div>
+                                </div>
+
+                                <div class="skill-progress-wrap">
+                                    <div class="d-flex justify-content-between small fw-semibold mb-1">
+                                        <span class="text-muted">Proficiency</span>
+                                        <span class="text-primary">92%</span>
+                                    </div>
+                                    <div class="skill-progress-bar">
+                                        <div class="skill-progress-fill" style="width: 92%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 4: Web Fundamentals & Frontend Integration -->
+                <div class="mb-5">
+                    <div class="category-heading">
+                        <div class="category-icon-circle text-pink">
+                            <i class="bi bi-window-stack"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold text-main mb-0">Web Fundamentals &amp; Frontend Integration</h3>
+                            <small class="text-muted">Semantic markup, responsive UI, glassmorphic styling, and client-side interactions</small>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- HTML5 & CSS3 Card -->
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="skill-icon-box text-danger">
+                                                <i class="bi bi-filetype-html"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="fw-bold text-main mb-0">HTML5, CSS3 &amp; Bootstrap 5</h5>
+                                                <small class="text-muted">Semantic Markup &amp; Responsive UI</small>
+                                            </div>
+                                        </div>
+                                        <span class="skill-badge-level badge-level-danger">Advanced</span>
+                                    </div>
+
+                                    <p class="text-muted small mb-3">
+                                        Experienced in building pixel-perfect, mobile-first responsive interfaces using semantic HTML5, Flexbox, CSS Grid, Bootstrap 5 components, and glassmorphic design systems.
+                                    </p>
+
+                                    <!-- Recruiter Metrics Grid -->
+                                    <div class="skill-metrics-grid">
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Experience</span>
+                                            <span class="metric-val text-primary">1+ Year</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Layouts</span>
+                                            <span class="metric-val text-info">15+ Templates</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Design</span>
+                                            <span class="metric-val text-success">Responsive</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tech Tags -->
+                                    <div class="skill-tags-list">
+                                        <span class="skill-tag-pill">Semantic HTML5</span>
+                                        <span class="skill-tag-pill">Flexbox &amp; CSS Grid</span>
+                                        <span class="skill-tag-pill">Bootstrap 5</span>
+                                        <span class="skill-tag-pill">Glassmorphism UI</span>
+                                    </div>
+                                </div>
+
+                                <div class="skill-progress-wrap">
+                                    <div class="d-flex justify-content-between small fw-semibold mb-1">
+                                        <span class="text-muted">Proficiency</span>
+                                        <span class="text-danger">90%</span>
+                                    </div>
+                                    <div class="skill-progress-bar">
+                                        <div class="skill-progress-fill web-fill" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- JavaScript Card -->
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="skill-icon-box text-warning">
+                                                <i class="bi bi-filetype-js"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="fw-bold text-main mb-0">JavaScript (ES6+)</h5>
+                                                <small class="text-muted">DOM Scripting &amp; Async Fetch</small>
+                                            </div>
+                                        </div>
+                                        <span class="skill-badge-level badge-level-warning">Intermediate</span>
+                                    </div>
+
+                                    <p class="text-muted small mb-3">
+                                        Proficient in modern ES6+ JavaScript syntax, asynchronous programming with Fetch API, DOM manipulation, custom event handling, and client-side theme switching.
+                                    </p>
+
+                                    <!-- Recruiter Metrics Grid -->
+                                    <div class="skill-metrics-grid">
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Experience</span>
+                                            <span class="metric-val text-primary">Academic + 3M</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Scripts</span>
+                                            <span class="metric-val text-info">20+ Modules</span>
+                                        </div>
+                                        <div class="skill-metric-item">
+                                            <span class="metric-label">Async</span>
+                                            <span class="metric-val text-success">Fetch &amp; JSON</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tech Tags -->
+                                    <div class="skill-tags-list">
+                                        <span class="skill-tag-pill">ES6+ Syntax</span>
+                                        <span class="skill-tag-pill">Fetch API</span>
+                                        <span class="skill-tag-pill">DOM Manipulation</span>
+                                        <span class="skill-tag-pill">Event Listeners</span>
+                                    </div>
+                                </div>
+
+                                <div class="skill-progress-wrap">
+                                    <div class="d-flex justify-content-between small fw-semibold mb-1">
+                                        <span class="text-muted">Proficiency</span>
+                                        <span class="text-warning">80%</span>
+                                    </div>
+                                    <div class="skill-progress-bar">
+                                        <div class="skill-progress-fill js-fill" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 5: Software Engineering & Architectural Principles -->
+                <div class="mb-5">
+                    <div class="category-heading">
+                        <div class="category-icon-circle text-info">
+                            <i class="bi bi-diagram-3"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold text-main mb-0">Engineering Principles &amp; Design Patterns</h3>
+                            <small class="text-muted">Foundational coding disciplines applied across every project</small>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="glass-card h-100">
+                                <div class="feature-icon-circle mb-3 text-primary">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+                                <h5 class="fw-bold text-main mb-2">Clean Code &amp; DRY</h5>
+                                <p class="text-muted small mb-0">
+                                    Writing modular, maintainable, and self-documenting code. Adhering to Python PEP 8 conventions and "Don't Repeat Yourself" (DRY) standards.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="glass-card h-100">
+                                <div class="feature-icon-circle mb-3 text-info">
+                                    <i class="bi bi-arrow-left-right"></i>
+                                </div>
+                                <h5 class="fw-bold text-main mb-2">RESTful Architecture</h5>
+                                <p class="text-muted small mb-0">
+                                    Designing predictable HTTP request/response lifecycles, structured error handling, stateless authentication, and clean URL routing.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="glass-card h-100">
+                                <div class="feature-icon-circle mb-3 text-success">
+                                    <i class="bi bi-diagram-2"></i>
+                                </div>
+                                <h5 class="fw-bold text-main mb-2">MVT &amp; MVC Patterns</h5>
+                                <p class="text-muted small mb-0">
+                                    Separating data persistence (Models), business logic (Views/Controllers), and user presentation (Templates) for clean system scalability.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action Banner (Eliminates empty whitespace) -->
+                <div class="cta-banner-modern text-center my-5">
+                    <div class="max-w-700 mx-auto">
+                        <div class="d-inline-flex align-items-center mb-3">
+                            <span class="badge-pill-glow">
+                                <i class="bi bi-briefcase-fill text-success"></i>
+                                <span>Available for Immediate Hire</span>
+                            </span>
+                        </div>
+                        <h2 class="display-6 fw-bold text-main mb-3">
+                            Looking for a Skilled <span class="gradient-text">Python &amp; Django Developer</span>?
+                        </h2>
+                        <p class="text-muted mb-4 fs-6">
+                            I am open to full-time Junior Software Engineer roles and internships where I can contribute to building high-performance web applications and REST APIs.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="projects.html" class="btn btn-gradient px-4 py-2">
+                                <i class="bi bi-collection-play me-2"></i> View Django Projects
+                            </a>
+                            <a href="resume.html" class="btn btn-glass px-4 py-2">
+                                <i class="bi bi-file-earmark-pdf me-2"></i> View ATS Resume
+                            </a>
+                            <a href="contact.html" class="btn btn-glass px-4 py-2">
+                                <i class="bi bi-envelope-fill me-2"></i> Get in Touch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/918263986554?text=Hi%20Vyankateshwar,%20I%20reviewed%20your%20portfolio%20skills!" target="_blank" class="whatsapp-float" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top" class="back-to-top" title="Back to Top" role="button" aria-label="Back to top of page">
+        <i class="bi bi-arrow-up-short fs-3"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand gradient-text fs-3 mb-2 d-block" href="index.html">
+                        Vyankateshwar Pund
+                    </a>
+                    <p class="text-muted small mb-3">
+                        Junior Software Engineer &amp; Python / Django Developer passionate about designing high-performance REST APIs, 
+                        relational MySQL databases, and clean architecture full-stack solutions.
+                    </p>
+
+                    <!-- Availability Badges -->
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50"><i class="bi bi-briefcase-fill me-1"></i> Open to Full-time</span>
+                        <span class="badge bg-info bg-opacity-25 text-info border border-info border-opacity-50"><i class="bi bi-mortarboard-fill me-1"></i> Open to Internship</span>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <a href="https://github.com/vyankateshwarpund" target="_blank" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="GitHub" aria-label="GitHub Profile">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/vyankateshwar-pund-7a654632b" target="_blank" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="LinkedIn" aria-label="LinkedIn Profile">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="mailto:pundvyankateshwar@gmail.com" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="Email" aria-label="Send Email">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
+                        <a href="tel:+918263986554" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="Phone" aria-label="Call Phone">
+                            <i class="bi bi-telephone-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3 fw-bold">Quick Navigation</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none">About Me</a></li>
+                        <li class="mb-2"><a href="skills.html" class="text-muted text-decoration-none">Skills &amp; Metrics</a></li>
+                        <li class="mb-2"><a href="projects.html" class="text-muted text-decoration-none">Projects Showcase</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3 fw-bold">Portfolio Apps</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="resume.html" class="text-muted text-decoration-none">Resume Preview</a></li>
+                        <li class="mb-2"><a href="certificates.html" class="text-muted text-decoration-none">Certificates</a></li>
+                        <li class="mb-2"><a href="achievements.html" class="text-muted text-decoration-none">Achievements</a></li>
+                        <li class="mb-2"><a href="gallery.html" class="text-muted text-decoration-none">Campus &amp; Events</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="text-white mb-3 fw-bold">Contact Details</h6>
+                    <ul class="list-unstyled small text-muted mb-3">
+                        <li class="mb-2"><i class="bi bi-envelope-fill text-warning me-2"></i> pundvyankateshwar@gmail.com</li>
+                        <li class="mb-2"><i class="bi bi-telephone-fill text-info me-2"></i> +91 8263986554</li>
+                        <li class="mb-2"><i class="bi bi-geo-alt-fill text-success me-2"></i> Amravati, Maharashtra, India</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-gradient btn-sm w-100"><i class="bi bi-chat-left-dots me-1"></i> Send a Message</a>
+                </div>
+            </div>
+
+            <hr class="my-4 border-secondary opacity-25">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <span class="text-muted small">&copy; 2026 Vyankateshwar Santosh Pund. Made with <span class="text-danger">Python ❤️ Django</span></span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <span class="badge bg-dark border border-secondary text-muted me-2"><i class="bi bi-shield-check text-success"></i> Production Ready</span>
+                    <span class="badge bg-dark border border-secondary text-muted"><i class="bi bi-cpu text-info"></i> Python 3 &amp; Django 6</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="static/js/main.js"></script>
+    <script src="static/js/github.js"></script>
+</body>
+</html>
