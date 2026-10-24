@@ -1,47 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Management System REST API | Project Details</title>
+    <title>Student Management System (SMS) | Full-Stack Web Application | Vyankateshwar Pund</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Production Personal Portfolio of Vyankateshwar Santosh Pund - Junior Software Engineer, Python Developer, Django Backend Developer, Python Full Stack Developer.">
-    <meta name="keywords" content="Vyankateshwar Pund, Python Developer, Django Developer, Software Engineer, REST API, Full Stack Developer, MySQL, Amravati, India">
+    <meta name="description" content="Production Enterprise Campus Management Platform with 3-tier RBAC, Attendance Tracking, Fee Invoicing, CGPA Grading, and live deployment on PythonAnywhere.">
+    <meta name="keywords" content="Student Management System, SMS, Django, Python, Django REST Framework, RBAC, MySQL, Bootstrap 5, PythonAnywhere, Vyankateshwar Pund">
     <meta name="author" content="Vyankateshwar Santosh Pund">
 
-    <!-- Open Graph / Facebook / LinkedIn -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Vyankateshwar Santosh Pund - Software Engineer Portfolio">
-    <meta property="og:description" content="Production-ready portfolio showcasing Python, Django, REST APIs, MySQL, and Full Stack Web Projects.">
-    <meta property="og:url" content="https://vyankateshwarpund.github.io/">
-    <meta property="og:image" content="media/profile/vyankateshwar_profile.jpg">
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Student Management System (SMS) | Full-Stack Web Application">
+    <meta property="og:description" content="Enterprise Campus Management Platform supporting 3-Tier RBAC, live attendance tracking, fee invoicing, and live cloud deployment.">
+    <meta property="og:url" content="https://vyankateshwarpund.pythonanywhere.com/login/">
+    <meta property="og:image" content="media/projects/student-management-api.svg">
 
-    <!-- JSON-LD Structured Data for SEO -->
+    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Vyankateshwar Santosh Pund",
-      "jobTitle": "Junior Software Engineer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "CCIT Institute"
+      "@type": "SoftwareApplication",
+      "name": "Student Management System (SMS)",
+      "operatingSystem": "Web Application",
+      "applicationCategory": "Educational / Enterprise SaaS",
+      "author": {
+        "@type": "Person",
+        "name": "Vyankateshwar Santosh Pund"
       },
-      "url": "https://vyankateshwarpund.github.io/",
-      "sameAs": [
-        "https://github.com/vyankateshwarpund",
-        "https://linkedin.com/in/vyankateshwar-pund-7a654632b"
-      ],
-      "email": "pundvyankateshwar@gmail.com",
-      "telephone": "+91 8263986554",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Amravati",
-        "addressRegion": "Maharashtra",
-        "addressCountry": "India"
-      }
+      "url": "https://vyankateshwarpund.pythonanywhere.com/login/"
     }
     </script>
 
@@ -54,19 +42,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap 5 & Bootstrap Icons -->
+    <!-- Bootstrap 5 & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="static/css/style.css">
-    
 </head>
 <body>
-    <!-- Preloader -->
+    <!-- Preloader Screen -->
     <div id="preloader">
         <div class="preloader-logo">VP</div>
-        <div class="small text-muted mt-2 fw-semibold">Loading Portfolio...</div>
+        <div class="small text-muted mt-2 fw-semibold">Loading Student Management Architecture...</div>
         <div class="preloader-bar">
             <div class="preloader-progress"></div>
         </div>
@@ -85,249 +72,367 @@
 
     <!-- Floating Navbar -->
     <nav class="navbar navbar-expand-lg navbar-floating">
-    <div class="container-fluid">
-        <a class="navbar-brand gradient-text" href="index.html">
-            <i class="bi bi-terminal-fill me-2"></i>VP.dev
-        </a>
+        <div class="container-fluid">
+            <a class="navbar-brand gradient-text" href="index.html">
+                <i class="bi bi-terminal-fill me-2"></i>VP.dev
+            </a>
 
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavbar">
-            <i class="bi bi-list fs-2"></i>
-        </button>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavbar" aria-label="Toggle navigation">
+                <i class="bi bi-list fs-2"></i>
+            </button>
 
-        <div class="collapse navbar-collapse" id="portfolioNavbar">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link " href="skills.html">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                <li class="nav-item"><a class="nav-link " href="services.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link " href="certificates.html">Certificates</a></li>
-                <li class="nav-item"><a class="nav-link " href="gallery.html">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link " href="resume.html">Resume</a></li>
-                <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
-            </ul>
+            <div class="collapse navbar-collapse" id="portfolioNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
 
-            <div class="d-flex align-items-center gap-2">
-                <!-- Theme Toggle Button -->
-                <button id="theme-toggle-btn" class="btn btn-glass btn-sm px-3" title="Toggle Light/Dark Theme">
-                    <i class="bi bi-sun-fill"></i>
-                </button>
+                <div class="d-flex align-items-center gap-2">
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle-btn" class="btn btn-glass btn-sm px-3" title="Toggle Light/Dark Theme" aria-label="Toggle light or dark theme">
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
 
-                <!-- Resume CTA -->
-                <a href="resume.html" class="btn btn-gradient btn-sm px-3">
-                    <i class="bi bi-download me-1"></i> CV
-                </a>
+                    <!-- Resume CTA -->
+                    <a href="resume.html" class="btn btn-gradient btn-sm px-3">
+                        <i class="bi bi-download me-1"></i> CV
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
-
+    </nav>
 
     <!-- Main Page Content -->
     <main style="min-height: 80vh;">
-        
+        <section class="py-5 mt-5">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+                    <a href="projects.html" class="btn btn-glass btn-sm"><i class="bi bi-arrow-left me-1"></i> Back to Projects</a>
+                    <div class="d-flex gap-2">
+                        <a href="https://github.com/vyankateshwarpund" target="_blank" class="btn btn-glass btn-sm">
+                            <i class="bi bi-github me-1"></i> GitHub Code
+                        </a>
+                        <a href="https://vyankateshwarpund.pythonanywhere.com/login/" target="_blank" class="btn btn-gradient btn-sm">
+                            <i class="bi bi-box-arrow-up-right me-1"></i> Launch Live Platform
+                        </a>
+                    </div>
+                </div>
 
-        
-<section class="py-5 mt-5">
-    <div class="container">
-        <a href="projects.html" class="btn btn-glass btn-sm mb-4"><i class="bi bi-arrow-left me-1"></i> Back to Projects</a>
+                <div class="row gy-4">
+                    <div class="col-lg-8">
+                        <div class="glass-card mb-4">
+                            
+                            <!-- Application Architecture & Schema Preview -->
+                            <div class="overflow-hidden rounded-3 mb-4 border border-secondary border-opacity-25 shadow-lg" style="max-height: 440px; background:#0f172a;">
+                                <a href="https://vyankateshwarpund.pythonanywhere.com/login/" target="_blank" title="Click to launch live Student Management System">
+                                    <img src="media/projects/student-management-api.svg" alt="Student Management System (SMS) Preview" class="img-fluid w-100" style="object-fit: cover; max-height: 440px; display: block;">
+                                </a>
+                            </div>
 
-        <div class="row gy-4">
-            <div class="col-lg-8">
-                <div class="glass-card mb-4">
-                    <div class="overflow-hidden rounded-3 mb-4" style="max-height: 400px; background:#1e293b;">
-                        
-                        <div class="w-100 py-5 text-center gradient-text fs-1 fw-bold opacity-50">
-                            <i class="bi bi-code-square"></i>
+                            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                                <div class="d-flex flex-wrap gap-2 align-items-center">
+                                    <span class="badge bg-primary bg-opacity-25 text-primary px-3 py-2 border border-primary border-opacity-50">
+                                        Full-Stack Web Application
+                                    </span>
+                                    <span class="badge bg-info bg-opacity-25 text-info px-3 py-2 border border-info border-opacity-50">
+                                        <i class="bi bi-shield-lock me-1"></i> 3-Tier RBAC
+                                    </span>
+                                    <a href="https://vyankateshwarpund.pythonanywhere.com/login/" target="_blank" class="badge bg-success bg-opacity-25 text-success px-3 py-2 text-decoration-none border border-success border-opacity-50">
+                                        <i class="bi bi-broadcast me-1"></i> Live on PythonAnywhere
+                                    </a>
+                                </div>
+                                <div class="d-flex gap-3 text-muted small">
+                                    <span><i class="bi bi-heart-fill text-danger me-1"></i>38 Likes</span>
+                                </div>
+                            </div>
+
+                            <h2 class="fw-bold text-white mb-2">Student Management System (SMS) | Full-Stack Web Application</h2>
+                            <p class="lead text-muted mb-4">
+                                Enterprise Campus Management Platform with 3-tier Role-Based Access Control, attendance tracking with eligibility checks, fee invoicing ledger, and examination grading.
+                            </p>
+
+                            <h5 class="fw-bold text-white mb-3">Project Overview &amp; Architecture</h5>
+                            <p class="text-muted leading-relaxed mb-4">
+                                The <strong>Student Management System (SMS)</strong> is an end-to-end Enterprise Campus Management Platform architected with <strong>Python</strong>, <strong>Django</strong>, <strong>Django REST Framework</strong>, and <strong>MySQL / PostgreSQL</strong>, deployed live in production on <strong>PythonAnywhere WSGI</strong>.
+                                Engineered to streamline institutional workflows, the platform enforces granular <strong>Role-Based Access Control (RBAC) across 3 distinct tiers</strong>: System Administrators, Faculty Members, and Students &mdash; providing customized dashboards, automated business rules, financial ledger tracking, and high-performance ORM queries.
+                            </p>
+
+                            <!-- Core Bulleted Highlights with Strong Action Verbs -->
+                            <h5 class="fw-bold text-white mb-3">Core Technical Highlights &amp; Accomplishments</h5>
+                            <div class="glass-card mb-4 border-start border-4 border-primary">
+                                <ul class="list-unstyled text-muted small mb-0 d-flex flex-column gap-3">
+                                    <li class="d-flex align-items-start gap-2">
+                                        <i class="bi bi-diagram-3-fill text-primary fs-5 mt-n1 flex-shrink-0"></i>
+                                        <div>
+                                            <strong class="text-white d-block">Enterprise Campus Platform &amp; 3-Tier RBAC:</strong>
+                                            Architected and deployed an end-to-end Enterprise Campus Management Platform supporting Role-Based Access Control (RBAC) across 3 distinct tiers: System Administrators, Faculty, and Students.
+                                        </div>
+                                    </li>
+
+                                    <li class="d-flex align-items-start gap-2">
+                                        <i class="bi bi-cpu-fill text-info fs-5 mt-n1 flex-shrink-0"></i>
+                                        <div>
+                                            <strong class="text-white d-block">Modular Academic &amp; Invoicing Endpoints:</strong>
+                                            Engineered RESTful API endpoints and modular Django apps for Attendance Tracking, Fee Invoicing, Examination Timetables, Coursework Assignments, and Academic Grading (CGPA/GPA).
+                                        </div>
+                                    </li>
+
+                                    <li class="d-flex align-items-start gap-2">
+                                        <i class="bi bi-speedometer text-success fs-5 mt-n1 flex-shrink-0"></i>
+                                        <div>
+                                            <strong class="text-white d-block">Interactive Data-Driven Student Dashboard:</strong>
+                                            Implemented an interactive, data-driven Student Dashboard visualizing live metrics including attendance percentage (>75% eligibility check), outstanding fee balances, pending submissions, and exam countdowns.
+                                        </div>
+                                    </li>
+
+                                    <li class="d-flex align-items-start gap-2">
+                                        <i class="bi bi-database-check text-warning fs-5 mt-n1 flex-shrink-0"></i>
+                                        <div>
+                                            <strong class="text-white d-block">Relational Schemas &amp; Query Optimization:</strong>
+                                            Designed relational database schemas utilizing Django ORM, optimizing complex multi-table queries (<code>select_related</code>, <code>prefetch_related</code>, <code>Q</code> objects, aggregation) to ensure low latency.
+                                        </div>
+                                    </li>
+
+                                    <li class="d-flex align-items-start gap-2">
+                                        <i class="bi bi-receipt-cutoff text-danger fs-5 mt-n1 flex-shrink-0"></i>
+                                        <div>
+                                            <strong class="text-white d-block">Financial Ledger &amp; Invoice Engine:</strong>
+                                            Built a Financial Ledger &amp; Invoice Engine automating fee receipts, transaction logs, and partial/full payment state tracking.
+                                        </div>
+                                    </li>
+
+                                    <li class="d-flex align-items-start gap-2">
+                                        <i class="bi bi-cloud-arrow-up-fill text-info fs-5 mt-n1 flex-shrink-0"></i>
+                                        <div>
+                                            <strong class="text-white d-block">Production Cloud Deployment &amp; Pipelines:</strong>
+                                            Deployed production application to cloud hosting via PythonAnywhere WSGI, utilizing Git for version control and migration pipelines. Live URL: <code>https://vyankateshwarpund.pythonanywhere.com/login/</code>.
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- 3-Tier RBAC Architecture Breakdown -->
+                            <h5 class="fw-bold text-white mb-3">3-Tier Role-Based Access Control (RBAC) Architecture</h5>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-4">
+                                    <div class="glass-card h-100 p-3 border-top border-3 border-danger">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <i class="bi bi-shield-lock-fill text-danger fs-4"></i>
+                                            <h6 class="fw-bold text-white mb-0">System Admins</h6>
+                                        </div>
+                                        <ul class="list-unstyled text-muted small mb-0">
+                                            <li class="mb-1"><i class="bi bi-check2 text-danger me-1"></i> Master table configs</li>
+                                            <li class="mb-1"><i class="bi bi-check2 text-danger me-1"></i> Fee structure &amp; receipts</li>
+                                            <li class="mb-1"><i class="bi bi-check2 text-danger me-1"></i> User creation &amp; audits</li>
+                                            <li><i class="bi bi-check2 text-danger me-1"></i> Institutional reports</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="glass-card h-100 p-3 border-top border-3 border-primary">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <i class="bi bi-person-video3 text-primary fs-4"></i>
+                                            <h6 class="fw-bold text-white mb-0">Faculty Members</h6>
+                                        </div>
+                                        <ul class="list-unstyled text-muted small mb-0">
+                                            <li class="mb-1"><i class="bi bi-check2 text-primary me-1"></i> Attendance marking</li>
+                                            <li class="mb-1"><i class="bi bi-check2 text-primary me-1"></i> Marks &amp; GPA grading</li>
+                                            <li class="mb-1"><i class="bi bi-check2 text-primary me-1"></i> Coursework &amp; assignments</li>
+                                            <li><i class="bi bi-check2 text-primary me-1"></i> Exam scheduling</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="glass-card h-100 p-3 border-top border-3 border-success">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <i class="bi bi-mortarboard-fill text-success fs-4"></i>
+                                            <h6 class="fw-bold text-white mb-0">Students</h6>
+                                        </div>
+                                        <ul class="list-unstyled text-muted small mb-0">
+                                            <li class="mb-1"><i class="bi bi-check2 text-success me-1"></i> Attendance % alert (&gt;75%)</li>
+                                            <li class="mb-1"><i class="bi bi-check2 text-success me-1"></i> Fee invoice &amp; ledger</li>
+                                            <li class="mb-1"><i class="bi bi-check2 text-success me-1"></i> CGPA &amp; grade sheets</li>
+                                            <li><i class="bi bi-check2 text-success me-1"></i> Exam countdown timer</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                        
                     </div>
 
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <span class="badge bg-primary bg-opacity-25 text-primary px-3 py-2 border border-primary border-opacity-50">
-                            Backend &amp; REST API
-                        </span>
-                        <div class="d-flex gap-3 text-muted small">
-                            <span><i class="bi bi-heart-fill text-danger me-1"></i>38 Likes</span>
+                    <!-- Sidebar Info -->
+                    <div class="col-lg-4">
+                        <div class="glass-card mb-4 position-sticky" style="top: 100px;">
+                            <h5 class="fw-bold text-white mb-3">Project Metadata</h5>
+
+                            <div class="mb-3">
+                                <span class="text-muted small d-block mb-1 fw-semibold">Architecture Model</span>
+                                <span class="badge bg-primary bg-opacity-25 text-primary px-3 py-2 border border-primary border-opacity-50">
+                                    <i class="bi bi-diagram-3 me-1"></i> 3-Tier Enterprise RBAC
+                                </span>
+                            </div>
+
+                            <div class="mb-4">
+                                <span class="text-muted small d-block mb-2 fw-semibold">Tech Stack Used</span>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-dark border border-secondary text-info px-3 py-2">
+                                        <i class="bi bi-filetype-py me-1"></i> Python
+                                    </span>
+                                    <span class="badge bg-dark border border-secondary text-info px-3 py-2">
+                                        <i class="bi bi-box-seam me-1"></i> Django
+                                    </span>
+                                    <span class="badge bg-dark border border-secondary text-info px-3 py-2">
+                                        <i class="bi bi-cpu me-1"></i> Django REST Framework
+                                    </span>
+                                    <span class="badge bg-dark border border-secondary text-info px-3 py-2">
+                                        <i class="bi bi-filetype-js me-1"></i> JavaScript (ES6+)
+                                    </span>
+                                    <span class="badge bg-dark border border-secondary text-info px-3 py-2">
+                                        <i class="bi bi-bootstrap me-1"></i> Bootstrap 5
+                                    </span>
+                                    <span class="badge bg-dark border border-secondary text-info px-3 py-2">
+                                        <i class="bi bi-database me-1"></i> SQLite / PostgreSQL / MySQL
+                                    </span>
+                                    <span class="badge bg-dark border border-secondary text-info px-3 py-2">
+                                        <i class="bi bi-git me-1"></i> Git
+                                    </span>
+                                    <span class="badge bg-dark border border-secondary text-info px-3 py-2">
+                                        <i class="bi bi-terminal me-1"></i> Linux / WSGI
+                                    </span>
+                                    <span class="badge bg-dark border border-secondary text-info px-3 py-2">
+                                        <i class="bi bi-cloud-arrow-up me-1"></i> PythonAnywhere
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="d-grid gap-2 mb-4">
+                                <a href="https://vyankateshwarpund.pythonanywhere.com/login/" target="_blank" class="btn btn-gradient w-100 py-2">
+                                    <i class="bi bi-box-arrow-up-right me-2"></i> Launch Live Application
+                                </a>
+                                <a href="https://github.com/vyankateshwarpund" target="_blank" class="btn btn-glass w-100 py-2">
+                                    <i class="bi bi-github me-2"></i> View GitHub Source
+                                </a>
+                                <button class="btn btn-outline-danger w-100 btn-like-project" data-project-id="1">
+                                    <i class="bi bi-heart-fill me-2"></i> Like Project (<span class="likes-count">38</span>)
+                                </button>
+                            </div>
+
+                            <hr class="border-secondary opacity-25 mb-4">
+
+                            <div>
+                                <span class="text-muted small d-block mb-1 fw-semibold">Live Production Portal</span>
+                                <a href="https://vyankateshwarpund.pythonanywhere.com/login/" target="_blank" class="small text-primary text-break fw-semibold">
+                                    https://vyankateshwarpund.pythonanywhere.com/login/
+                                </a>
+                            </div>
+
                         </div>
                     </div>
-
-                    <h2 class="fw-bold text-white mb-3">Student Management System REST API</h2>
-                    <p class="lead text-muted mb-4">Robust API managing 500+ student records with role-based access, JWT authentication, and MySQL backend.</p>
-
-                    <h5 class="fw-bold text-white mb-3">Project Overview & Architecture</h5>
-                    <p class="text-muted leading-relaxed mb-4" style="white-space: pre-line;">Designed and engineered a high-concurrency Student Management System REST API powered by Django REST Framework and MySQL. Features granular Role-Based Access Control (RBAC) separating Admin, Faculty, and Student permissions. Handles student registration, course enrollment, attendance tracking, grade assignments, and filtering. Includes comprehensive unit testing and Swagger documentation.</p>
-
-                    <h5 class="fw-bold text-white mb-3">Key Features & Technical Scope</h5>
-                    <div class="glass-card mb-4 border-start border-4 border-info">
-                        <p class="text-muted small mb-0" style="white-space: pre-line;">• Secure JWT &amp; Session Authentication
-• Granular Role-Based Access Control (Admin, Faculty, Student)
-• Complete CRUD endpoints for 500+ Student &amp; Course Records
-• Advanced filtering, sorting, and pagination
-• Query optimization with Django select_related &amp; prefetch_related</p>
-                    </div>
-
-                    <!-- Screenshot Gallery if any -->
-                    
                 </div>
             </div>
-
-            <!-- Sidebar Info -->
-            <div class="col-lg-4">
-                <div class="glass-card mb-4 position-sticky" style="top: 100px;">
-                    <h5 class="fw-bold text-white mb-3">Project Metadata</h5>
-
-                    <div class="mb-4">
-                        <span class="text-muted small d-block mb-2 fw-semibold">Tech Stack Used</span>
-                        <div class="d-flex flex-wrap gap-2">
-                            
-                            <span class="badge bg-dark border border-secondary text-info px-3 py-2">
-                                <i class="bi bi-filetype-py me-1"></i> Python
-                            </span>
-                            
-                            <span class="badge bg-dark border border-secondary text-info px-3 py-2">
-                                <i class="bi bi-box-seam me-1"></i> Django
-                            </span>
-                            
-                            <span class="badge bg-dark border border-secondary text-info px-3 py-2">
-                                <i class="bi bi-cpu me-1"></i> Django REST Framework
-                            </span>
-                            
-                            <span class="badge bg-dark border border-secondary text-info px-3 py-2">
-                                <i class="bi bi-database me-1"></i> MySQL
-                            </span>
-                            
-                        </div>
-                    </div>
-
-                    <div class="d-grid gap-2 mb-4">
-                        
-                        <a href="https://github.com/vyankateshwarpund" target="_blank" class="btn btn-glass w-100">
-                            <i class="bi bi-github me-2"></i> View GitHub Source
-                        </a>
-                        
-                        
-                        <a href="https://vyankateshwarpund.github.io/api/projects/" target="_blank" class="btn btn-gradient w-100">
-                            <i class="bi bi-box-arrow-up-right me-2"></i> Launch Live Demo
-                        </a>
-                        
-                        <button class="btn btn-outline-danger w-100 btn-like-project" data-project-id="1">
-                            <i class="bi bi-heart-fill me-2"></i> Like Project (<span class="likes-count">38</span>)
-                        </button>
-                    </div>
-
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
+        </section>
     </main>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/918263986554?text=Hi%20Vyankateshwar,%20I%20reviewed%20your%20portfolio!" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <a href="https://wa.me/918263986554?text=Hi%20Vyankateshwar,%20I%20reviewed%20your%20Student%20Management%20System!" target="_blank" class="whatsapp-float" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
         <i class="bi bi-whatsapp"></i>
     </a>
 
-    <!-- Back to Top Button -->
-    <div id="back-to-top" class="back-to-top" title="Back to Top">
-        <i class="bi bi-arrow-up-short fs-3"></i>
+    <!-- Back to top button -->
+    <div id="back-to-top" class="back-to-top" title="Back to top" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
     </div>
 
-    <!-- Footer -->
-    <footer>
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-4 col-md-6">
-                <a class="navbar-brand gradient-text fs-3 mb-2 d-block" href="index.html">
-                    Vyankateshwar Pund
-                </a>
-                <p class="text-muted small mb-3">
-                    Fresher Software Engineer & Python Backend Developer passionate about designing high-performance REST APIs, 
-                    relational MySQL databases, and clean architecture full-stack solutions.
-                </p>
-
-                <!-- Availability Badges -->
-                <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50"><i class="bi bi-briefcase-fill me-1"></i> Open to Full-time</span>
-                    <span class="badge bg-info bg-opacity-25 text-info border border-info border-opacity-50"><i class="bi bi-mortarboard-fill me-1"></i> Open to Internship</span>
+    <!-- Production Footer -->
+    <footer class="footer-modern py-5 border-top border-secondary border-opacity-25">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand gradient-text fs-3 mb-2 d-block" href="index.html">
+                        Vyankateshwar Pund
+                    </a>
+                    <p class="text-muted small mb-3">
+                        Python &amp; Django Developer specializing in robust backend architectures, high-performance REST APIs, and database engineering.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="https://github.com/vyankateshwarpund" target="_blank" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="GitHub" aria-label="GitHub Profile">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/vyankateshwar-pund-7a654632b" target="_blank" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="LinkedIn" aria-label="LinkedIn Profile">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="mailto:pundvyankateshwar@gmail.com" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="Email" aria-label="Send Email">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
+                        <a href="tel:+918263986554" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="Phone" aria-label="Call Phone">
+                            <i class="bi bi-telephone-fill"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="d-flex gap-2">
-                    
-                    <a href="https://github.com/vyankateshwarpund" target="_blank" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="GitHub">
-                        <i class="bi bi-github"></i>
-                    </a>
-                    
-                    <a href="https://linkedin.com/in/vyankateshwar-pund-7a654632b" target="_blank" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="LinkedIn">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-                    
-                    <a href="mailto:pundvyankateshwar@gmail.com" target="_blank" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="Email">
-                        <i class="bi bi-envelope-fill"></i>
-                    </a>
-                    
-                    <a href="tel:+918263986554" target="_blank" class="btn btn-glass btn-sm rounded-circle p-2" style="width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;" title="Phone">
-                        <i class="bi bi-telephone-fill"></i>
-                    </a>
-                    
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3 fw-bold">Quick Navigation</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none">About Me</a></li>
+                        <li class="mb-2"><a href="skills.html" class="text-muted text-decoration-none">Skills &amp; Metrics</a></li>
+                        <li class="mb-2"><a href="projects.html" class="text-muted text-decoration-none">Projects Showcase</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3 fw-bold">Portfolio Apps</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="resume.html" class="text-muted text-decoration-none">Resume Preview</a></li>
+                        <li class="mb-2"><a href="certificates.html" class="text-muted text-decoration-none">Certificates</a></li>
+                        <li class="mb-2"><a href="achievements.html" class="text-muted text-decoration-none">Achievements</a></li>
+                        <li class="mb-2"><a href="gallery.html" class="text-muted text-decoration-none">Campus &amp; Events</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="text-white mb-3 fw-bold">Contact Details</h6>
+                    <ul class="list-unstyled small text-muted mb-3">
+                        <li class="mb-2"><i class="bi bi-envelope-fill text-warning me-2"></i> pundvyankateshwar@gmail.com</li>
+                        <li class="mb-2"><i class="bi bi-telephone-fill text-info me-2"></i> +91 8263986554</li>
+                        <li class="mb-2"><i class="bi bi-geo-alt-fill text-success me-2"></i> Amravati, Maharashtra, India</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-gradient btn-sm w-100"><i class="bi bi-chat-left-dots me-1"></i> Send a Message</a>
                 </div>
             </div>
 
-            <div class="col-lg-2 col-md-6">
-                <h6 class="text-white mb-3 fw-bold">Quick Navigation</h6>
-                <ul class="list-unstyled small">
-                    <li class="mb-2"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
-                    <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none">About Me</a></li>
-                    <li class="mb-2"><a href="skills.html" class="text-muted text-decoration-none">Skills & Metrics</a></li>
-                    <li class="mb-2"><a href="projects.html" class="text-muted text-decoration-none">Projects Showcase</a></li>
-                    <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none">Services</a></li>
-                </ul>
-            </div>
+            <hr class="my-4 border-secondary opacity-25">
 
-            <div class="col-lg-2 col-md-6">
-                <h6 class="text-white mb-3 fw-bold">Portfolio Apps</h6>
-                <ul class="list-unstyled small">
-                    <li class="mb-2"><a href="resume.html" class="text-muted text-decoration-none">Resume Preview</a></li>
-                    <li class="mb-2"><a href="certificates.html" class="text-muted text-decoration-none">Certificates</a></li>
-                    <li class="mb-2"><a href="achievements.html" class="text-muted text-decoration-none">Achievements</a></li>
-                    
-                </ul>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <h6 class="text-white mb-3 fw-bold">Contact Details</h6>
-                <ul class="list-unstyled small text-muted mb-3">
-                    <li class="mb-2"><i class="bi bi-envelope-fill text-warning me-2"></i> pundvyankateshwar@gmail.com</li>
-                    <li class="mb-2"><i class="bi bi-telephone-fill text-info me-2"></i> +91 8263986554</li>
-                    <li class="mb-2"><i class="bi bi-geo-alt-fill text-success me-2"></i> Amravati, Maharashtra, India</li>
-                </ul>
-                <a href="contact.html" class="btn btn-gradient btn-sm w-100"><i class="bi bi-chat-left-dots me-1"></i> Send a Message</a>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <p class="small text-muted mb-0">
+                        &copy; 2026 Vyankateshwar Santosh Pund &bull; Built with Python &amp; Django Passion
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small text-muted mb-0">
+                        Amravati, Maharashtra, India &bull; <a href="resume.html" class="text-primary text-decoration-none fw-semibold">Download ATS CV</a>
+                    </p>
+                </div>
             </div>
         </div>
-
-        <hr class="my-4 border-secondary opacity-25">
-
-        <div class="row align-items-center">
-            <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
-                <span class="text-muted small">&copy; 2026 Vyankateshwar Santosh Pund. Made with <span class="text-danger">Python ❤️ Django</span></span>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                <span class="badge bg-dark border border-secondary text-muted me-2"><i class="bi bi-shield-check text-success"></i> Production Ready</span>
-                <span class="badge bg-dark border border-secondary text-muted"><i class="bi bi-cpu text-info"></i> Django 6 + MySQL</span>
-            </div>
-        </div>
-    </div>
-</footer>
-
+    </footer>
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom JavaScript -->
+    <!-- Main JavaScript -->
     <script src="static/js/main.js"></script>
-    <script src="static/js/github.js"></script>
-    
 </body>
 </html>
