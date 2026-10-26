@@ -42,39 +42,58 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+        [data-theme="light"] .cert-card {
+            background: #ffffff !important;
+            border-color: rgba(15, 23, 42, 0.1) !important;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06) !important;
         }
         .cert-card:hover {
-            transform: translateY(-7px);
+            transform: translateY(-6px);
             border-color: var(--accent-primary);
-            box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.25);
+            box-shadow: 0 20px 45px -10px rgba(99, 102, 241, 0.25);
         }
         .cert-img-container {
             position: relative;
-            height: 230px;
+            height: 260px;
             overflow: hidden;
-            background: #0f172a;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9));
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+            border-bottom: 1px solid var(--border-glass);
+        }
+        [data-theme="light"] .cert-img-container {
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0) !important;
+            border-bottom-color: rgba(15, 23, 42, 0.1) !important;
         }
         .cert-img-container img {
-            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
             height: 100%;
-            object-fit: cover;
-            object-position: center;
-            transition: transform 0.45s ease;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+            transition: transform 0.4s ease;
         }
         .cert-card:hover .cert-img-container img {
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
         .cert-overlay {
             position: absolute;
             inset: 0;
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(15, 23, 42, 0.65);
             display: flex;
             align-items: center;
             justify-content: center;
             opacity: 0;
             transition: opacity 0.3s ease;
             backdrop-filter: blur(2px);
+            z-index: 2;
         }
         .cert-img-container:hover .cert-overlay {
             opacity: 1;
@@ -154,7 +173,7 @@
                         Certificates &amp; <span class="gradient-text">Achievements</span>
                     </h1>
                     <p class="text-muted fs-5 leading-relaxed">
-                        Verified training courses from CCIT Institute and national hackathon honors representing hands-on mastery in Python, MySQL, Git, and web technologies.
+                        Verified Full Stack Internship from Auspify Technologies, national hackathon honors, and certified coursework representing hands-on mastery in Python, MySQL, Git, and web technologies.
                     </p>
                 </div>
             </div>
@@ -163,9 +182,9 @@
         <!-- Certificates Grid Section -->
         <section class="py-4 mb-5">
             <div class="container">
-                <div class="row g-4">
+                                <div class="row g-4">
                     
-                                        <!-- 1. Auspify Technologies - Full Stack Development Internship Completion Certificate -->
+                    <!-- 1. Auspify Technologies - Full Stack Development Internship Completion Certificate -->
                     <div class="col-lg-6 col-md-12">
                         <div class="cert-card">
                             <div class="cert-img-container" onclick="openCertModal('Full Stack Development Internship Certificate', 'media/certificates/auspify-technologies-full-stack-internship.jpg', 'Auspify Technologies (MSME Registered, Nagpur) &bull; ID: AT/INT/2036895', '24th October 2026')">
@@ -173,7 +192,7 @@
                                 <div class="cert-overlay">
                                     <span class="btn btn-gradient btn-sm px-3"><i class="bi bi-zoom-in me-1"></i> View Full Certificate</span>
                                 </div>
-                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-75 border border-success text-success">
+                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-80 border border-success text-success">
                                     <i class="bi bi-patch-check-fill me-1"></i> Verified Internship
                                 </span>
                             </div>
@@ -187,8 +206,8 @@
                                 </div>
 
                                 <h4 class="fw-bold text-main mb-2">Full Stack Development Internship Certificate</h4>
-                                <p class="text-muted small mb-2 flex-grow-1">
-                                    Awarded to <strong>Vyankateshwar Santosh Pund</strong> for successfully completing the internship as a <strong>Full Stack Development Intern</strong> at <em>Auspify Technologies</em> with dedication, excellence, and professional growth. Verified ID: <code>AT/INT/2036895</code>.
+                                <p class="text-muted small mb-3 flex-grow-1">
+                                    Awarded to <strong>Vyankateshwar Santosh Pund</strong> for successfully completing the internship as a <strong>Full Stack Development Intern</strong> at <em>Auspify Technologies</em> with dedication, excellence, and professional growth.
                                 </p>
 
                                 <div class="d-flex flex-wrap gap-1 mb-3">
@@ -208,7 +227,7 @@
                         </div>
                     </div>
 
-                    <!-- 1. Smart India Hackathon 2026 -->
+                    <!-- 2. Smart India Hackathon 2026 -->
                     <div class="col-lg-6 col-md-12">
                         <div class="cert-card">
                             <div class="cert-img-container" onclick="openCertModal('Smart India Hackathon (SIH) 2026', 'media/certificates/smart-india-hackathon-2026.jpg', 'Ministry of Education &amp; AICTE, Govt of India', '2026')">
@@ -216,7 +235,7 @@
                                 <div class="cert-overlay">
                                     <span class="btn btn-gradient btn-sm px-3"><i class="bi bi-zoom-in me-1"></i> View Full Certificate</span>
                                 </div>
-                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-75 border border-warning text-warning">
+                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-80 border border-warning text-warning">
                                     <i class="bi bi-trophy-fill me-1"></i> National Hackathon
                                 </span>
                             </div>
@@ -231,8 +250,15 @@
 
                                 <h4 class="fw-bold text-main mb-2">Smart India Hackathon (SIH) 2026</h4>
                                 <p class="text-muted small mb-3 flex-grow-1">
-                                    Awarded to <strong>Vyankateshwar Santosh Pund</strong> for participating in <em>Smart India Hackathon (SIH) 2026</em>, a nationwide initiative promoting Innovation, Problem Solving, and Youth Empowerment. Organized by Dr. Rajendra Gode Institute of Technology &amp; Research.
+                                    Awarded to <strong>Vyankateshwar Santosh Pund</strong> for participating in <em>Smart India Hackathon (SIH) 2026</em>, a nationwide initiative promoting Innovation, Problem Solving, and Youth Empowerment. Organized by Dr. Rajendra Gode Institute.
                                 </p>
+
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge theme-tech-badge small">National Level</span>
+                                    <span class="badge theme-tech-badge small">Innovation &amp; Tech</span>
+                                    <span class="badge theme-tech-badge small">Problem Solving</span>
+                                    <span class="badge theme-tech-badge small">Govt of India</span>
+                                </div>
 
                                 <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
                                     <span class="badge theme-tech-badge small"><i class="bi bi-award-fill text-warning me-1"></i>SIH 2026 Verified</span>
@@ -244,7 +270,7 @@
                         </div>
                     </div>
 
-                    <!-- 2. Python Programming Certificate -->
+                    <!-- 3. Python Programming Certificate -->
                     <div class="col-lg-6 col-md-12">
                         <div class="cert-card">
                             <div class="cert-img-container" onclick="openCertModal('Certificate Course in Python', 'media/certificates/python-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
@@ -252,7 +278,7 @@
                                 <div class="cert-overlay">
                                     <span class="btn btn-gradient btn-sm px-3"><i class="bi bi-zoom-in me-1"></i> View Full Certificate</span>
                                 </div>
-                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-75 border border-success text-success">
+                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-80 border border-success text-success">
                                     <i class="bi bi-filetype-py me-1"></i> Core Programming
                                 </span>
                             </div>
@@ -270,8 +296,15 @@
                                     Awarded to <strong>Mr. Vyankateshwar S. Pund</strong> upon successfully completing the comprehensive Certificate Course in <strong>Python</strong> from CCIT Centre, covering OOP, data structures, algorithms, and modular Python development.
                                 </p>
 
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge theme-tech-badge small">Python 3</span>
+                                    <span class="badge theme-tech-badge small">OOP Principles</span>
+                                    <span class="badge theme-tech-badge small">Data Structures</span>
+                                    <span class="badge theme-tech-badge small">Algorithms</span>
+                                </div>
+
                                 <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
-                                    <span class="badge theme-tech-badge small"><i class="bi bi-patch-check-fill text-success me-1"></i>Python Verified</span>
+                                    <span class="badge theme-tech-badge small text-success"><i class="bi bi-patch-check-fill text-success me-1"></i>Python Verified</span>
                                     <button class="btn btn-glass btn-sm" onclick="openCertModal('Certificate Course in Python', 'media/certificates/python-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
                                         <i class="bi bi-eye me-1"></i> Preview
                                     </button>
@@ -280,34 +313,41 @@
                         </div>
                     </div>
 
-                    <!-- 3. MySQL Database Certificate -->
-                    <div class="col-lg-4 col-md-6">
+                    <!-- 4. MySQL Database Certificate -->
+                    <div class="col-lg-6 col-md-12">
                         <div class="cert-card">
                             <div class="cert-img-container" onclick="openCertModal('Certificate Course in MYSQL', 'media/certificates/mysql-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
                                 <img src="media/certificates/mysql-certificate-ccit.jpg" alt="MySQL Certificate - CCIT">
                                 <div class="cert-overlay">
                                     <span class="btn btn-gradient btn-sm px-3"><i class="bi bi-zoom-in me-1"></i> View Full Certificate</span>
                                 </div>
-                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-75 border border-info text-info">
-                                    <i class="bi bi-database me-1"></i> Database
+                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-80 border border-info text-info">
+                                    <i class="bi bi-database me-1"></i> Relational Database
                                 </span>
                             </div>
 
                             <div class="p-4 d-flex flex-column flex-grow-1">
                                 <div class="d-flex align-items-center justify-content-between mb-2">
                                     <span class="badge bg-info bg-opacity-25 text-info fw-semibold px-3 py-1">
-                                        CCIT Institute
+                                        CCIT Institute (ISO 9001:2015)
                                     </span>
-                                    <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>Jul 2026</span>
+                                    <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>25th July 2026</span>
                                 </div>
 
-                                <h5 class="fw-bold text-main mb-2">Certificate Course in 'MYSQL'</h5>
+                                <h4 class="fw-bold text-main mb-2">Certificate Course in 'MYSQL'</h4>
                                 <p class="text-muted small mb-3 flex-grow-1">
-                                    Awarded to <strong>Mr. Vyankateshwar S. Pund</strong> for mastering relational database design, SQL querying, indexing, and normalization.
+                                    Awarded to <strong>Mr. Vyankateshwar S. Pund</strong> for mastering Relational database design, SQL querying, indexing, foreign key constraints, joins, subqueries, and database normalization.
                                 </p>
 
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge theme-tech-badge small">MySQL RDBMS</span>
+                                    <span class="badge theme-tech-badge small">Complex Joins</span>
+                                    <span class="badge theme-tech-badge small">Normalization</span>
+                                    <span class="badge theme-tech-badge small">Query Optimization</span>
+                                </div>
+
                                 <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
-                                    <span class="badge theme-tech-badge small"><i class="bi bi-database-check text-info me-1"></i>MySQL Verified</span>
+                                    <span class="badge theme-tech-badge small text-info"><i class="bi bi-patch-check-fill text-info me-1"></i>MySQL Verified</span>
                                     <button class="btn btn-glass btn-sm" onclick="openCertModal('Certificate Course in MYSQL', 'media/certificates/mysql-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
                                         <i class="bi bi-eye me-1"></i> Preview
                                     </button>
@@ -316,15 +356,15 @@
                         </div>
                     </div>
 
-                    <!-- 4. GitHub & Version Control Certificate -->
-                    <div class="col-lg-4 col-md-6">
+                    <!-- 5. GitHub & Version Control Certificate -->
+                    <div class="col-lg-6 col-md-12">
                         <div class="cert-card">
                             <div class="cert-img-container" onclick="openCertModal('Certificate Course in GITHUB', 'media/certificates/github-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
                                 <img src="media/certificates/github-certificate-ccit.jpg" alt="GitHub Certificate - CCIT">
                                 <div class="cert-overlay">
                                     <span class="btn btn-gradient btn-sm px-3"><i class="bi bi-zoom-in me-1"></i> View Full Certificate</span>
                                 </div>
-                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-75 border border-primary text-primary">
+                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-80 border border-primary text-primary">
                                     <i class="bi bi-git me-1"></i> Version Control
                                 </span>
                             </div>
@@ -332,18 +372,25 @@
                             <div class="p-4 d-flex flex-column flex-grow-1">
                                 <div class="d-flex align-items-center justify-content-between mb-2">
                                     <span class="badge bg-primary bg-opacity-25 text-primary fw-semibold px-3 py-1">
-                                        CCIT Institute
+                                        CCIT Institute (ISO 9001:2015)
                                     </span>
-                                    <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>Jul 2026</span>
+                                    <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>25th July 2026</span>
                                 </div>
 
-                                <h5 class="fw-bold text-main mb-2">Certificate Course in 'GITHUB'</h5>
+                                <h4 class="fw-bold text-main mb-2">Certificate Course in 'GITHUB'</h4>
                                 <p class="text-muted small mb-3 flex-grow-1">
-                                    Awarded to <strong>Mr. Vyankateshwar S. Pund</strong> for completing practical training in Git workflows, branch strategies, pull requests, and repository management.
+                                    Awarded to <strong>Mr. Vyankateshwar S. Pund</strong> for completing practical training in Git workflows, branch strategies, pull requests, resolving merge conflicts, and repository management.
                                 </p>
 
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge theme-tech-badge small">Git CLI</span>
+                                    <span class="badge theme-tech-badge small">GitHub Collaboration</span>
+                                    <span class="badge theme-tech-badge small">Branching &amp; PRs</span>
+                                    <span class="badge theme-tech-badge small">Version History</span>
+                                </div>
+
                                 <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
-                                    <span class="badge theme-tech-badge small"><i class="bi bi-github text-primary me-1"></i>Git Verified</span>
+                                    <span class="badge theme-tech-badge small text-primary"><i class="bi bi-patch-check-fill text-primary me-1"></i>Git Verified</span>
                                     <button class="btn btn-glass btn-sm" onclick="openCertModal('Certificate Course in GITHUB', 'media/certificates/github-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
                                         <i class="bi bi-eye me-1"></i> Preview
                                     </button>
@@ -352,15 +399,15 @@
                         </div>
                     </div>
 
-                    <!-- 5. HTML + CSS Web Design Certificate -->
-                    <div class="col-lg-4 col-md-6">
+                    <!-- 6. HTML + CSS Web Design Certificate -->
+                    <div class="col-lg-6 col-md-12">
                         <div class="cert-card">
                             <div class="cert-img-container" onclick="openCertModal('Certificate Course in HTML+CSS', 'media/certificates/html-css-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
                                 <img src="media/certificates/html-css-certificate-ccit.jpg" alt="HTML+CSS Certificate - CCIT">
                                 <div class="cert-overlay">
                                     <span class="btn btn-gradient btn-sm px-3"><i class="bi bi-zoom-in me-1"></i> View Full Certificate</span>
                                 </div>
-                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-75 border border-danger text-danger">
+                                <span class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-80 border border-danger text-danger">
                                     <i class="bi bi-filetype-html me-1"></i> Web Foundations
                                 </span>
                             </div>
@@ -368,18 +415,25 @@
                             <div class="p-4 d-flex flex-column flex-grow-1">
                                 <div class="d-flex align-items-center justify-content-between mb-2">
                                     <span class="badge bg-danger bg-opacity-25 text-danger fw-semibold px-3 py-1">
-                                        CCIT Institute
+                                        CCIT Institute (ISO 9001:2015)
                                     </span>
-                                    <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>Jul 2026</span>
+                                    <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>25th July 2026</span>
                                 </div>
 
-                                <h5 class="fw-bold text-main mb-2">Certificate Course in 'HTML+CSS'</h5>
+                                <h4 class="fw-bold text-main mb-2">Certificate Course in 'HTML+CSS'</h4>
                                 <p class="text-muted small mb-3 flex-grow-1">
-                                    Awarded to <strong>Mr. Vyankateshwar S. Pund</strong> for mastering modern responsive web structure, semantic HTML5, CSS3 layouts, and styling.
+                                    Awarded to <strong>Mr. Vyankateshwar S. Pund</strong> for mastering modern responsive web structure, semantic HTML5, CSS3 layouts, Flexbox, Grid, and aesthetic styling.
                                 </p>
 
+                                <div class="d-flex flex-wrap gap-1 mb-3">
+                                    <span class="badge theme-tech-badge small">HTML5 Semantics</span>
+                                    <span class="badge theme-tech-badge small">CSS3 Animations</span>
+                                    <span class="badge theme-tech-badge small">Flexbox &amp; Grid</span>
+                                    <span class="badge theme-tech-badge small">Responsive UI</span>
+                                </div>
+
                                 <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
-                                    <span class="badge theme-tech-badge small"><i class="bi bi-code-slash text-danger me-1"></i>HTML/CSS Verified</span>
+                                    <span class="badge theme-tech-badge small text-danger"><i class="bi bi-patch-check-fill text-danger me-1"></i>HTML/CSS Verified</span>
                                     <button class="btn btn-glass btn-sm" onclick="openCertModal('Certificate Course in HTML+CSS', 'media/certificates/html-css-certificate-ccit.jpg', 'CCIT Institute (ISO 9001:2015 Certified)', '25th July 2026')">
                                         <i class="bi bi-eye me-1"></i> Preview
                                     </button>
