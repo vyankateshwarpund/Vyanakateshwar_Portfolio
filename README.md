@@ -68,7 +68,7 @@ E:\My_Permnemt_Portfolio\
     │   ├── github-certificate-ccit.jpg
     │   └── html-css-certificate-ccit.jpg
     └── resume/
-        └── Vyankateshwar_Pund_Resume_ATS_dMshc7W.pdf               # Verified ATS PDF resume
+        └── Vyankateshwar_Pund_Resume_Fullstack_Devloper.pdf               # Verified ATS PDF resume
 ```
 
 ---
