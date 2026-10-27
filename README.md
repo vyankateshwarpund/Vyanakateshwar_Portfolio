@@ -41,11 +41,13 @@ E:\My_Permnemt_Portfolio\
 ├── project-student-management-system-rest-api.html                 # Student Management System REST API Case Study
 ├── project-e-commerce-web-application.html                         # E-Commerce Web App Case Study
 ├── project-enterprise-software-engineer-portfolio-analytics.html   # Enterprise Portfolio & Analytics Case Study
+├── project-technova-bootstrap-website.html                         # TechNova Bootstrap 5 Responsive Landing Page Case Study
 │
 ├── projects/                                                       # Subfolder mirror links
 │   ├── student-management-system-rest-api.html
 │   ├── e-commerce-web-application.html
-│   └── enterprise-software-engineer-portfolio-analytics.html
+│   ├── enterprise-software-engineer-portfolio-analytics.html
+│   └── technova-bootstrap-website.html
 │
 ├── static/
 │   ├── css/
